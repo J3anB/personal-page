@@ -18,10 +18,15 @@
   <%= @contact.message %>
 </p>
 
-<h1>Hello, Rails!</h1>
 <%= link_to 'my contacts', controller: 'contacts' %>
 
+<h2> Comments </h2>
+  <%= render @contact.comments %>
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+
+<h2>add a new contact!</h2>
+<%= link_to 'New contact', new_contact_path %>
 <%= link_to 'edit', edit_contact_path(@contact) %>
 <%= link_to 'back', contacts_path %>
-<h1>add a new contact!</h1>
-<%= link_to 'New contact', new_contact_path %>

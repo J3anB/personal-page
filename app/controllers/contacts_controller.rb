@@ -1,5 +1,6 @@
 class ContactsController < ApplicationController
 
+
   def index
     @contacts = Contact.all
   end
@@ -36,10 +37,10 @@ class ContactsController < ApplicationController
   end
 
   def destroy
-    @contact = contact.find(params[:id])
+    @contact = Contact.find(params[:id])
     @contact.destroy
 
-    redirect_to contact_path
+    redirect_to contacts_path
   end
 
   private
