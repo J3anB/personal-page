@@ -3,11 +3,14 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
+  post 'contacts/:id', to: 'admin_replies#create'
+
+
   devise_for :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   resources :contacts do
-    resources :comments
+    resources :comments, :admin_replies
   end
 
 end

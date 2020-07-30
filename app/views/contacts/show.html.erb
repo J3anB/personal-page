@@ -17,6 +17,24 @@
   <strong>Message:</strong>
   <%= @contact.message %>
 </p>
+<p>
+  <strong>Admin response:</strong>
+  <% @contact.admin_replies.each do |t| %>
+    <%= t.text %>
+  <% end %>
+</p>
+
+
+<% if current_user.admin %>
+  <p>
+    <%= form_with(scope: :reply, local: true) do |form| %>
+      <%= form.label :text %><br>
+      <%= form.text_area :text %><br>
+      <%= form.submit %>
+    <% end %>
+  </p>
+<% end %>
+
 
 <%= link_to 'my contacts', controller: 'contacts' %>
 <%= link_to 'home', controller: 'home' %>
@@ -29,5 +47,8 @@
 
 <h2>add a new contact!</h2>
 <%= link_to 'New contact', new_contact_path %>
-<%= link_to 'edit', edit_contact_path(@contact) %>
+
+<% if current_user.admin %>
+  <%= link_to 'edit', edit_contact_path(@contact) %>
+<% end %>
 <%= link_to 'back', contacts_path %>
