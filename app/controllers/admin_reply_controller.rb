@@ -1,8 +1,8 @@
-class AdminRepliesController < ApplicationController
+class AdminReplyController < ApplicationController
 
   def create
     @contact = Contact.find(params[:id])
-    @reply = @contact.admin_replies.create(reply_params)
+    @reply = @contact.create_admin_reply(reply_params)
     redirect_to contact_path(@contact)
   end
 

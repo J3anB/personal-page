@@ -19,10 +19,10 @@
 </p>
 <p>
   <strong>Admin response:</strong>
-  <% @contact.admin_replies.each do |t| %>
-    <%= t.text %>
+  <% if @contact.admin_reply%>
+  <%= @contact.admin_reply.text %>
   <% end %>
-</p>
+    </p>
 
 
 <% if current_user.admin %>
