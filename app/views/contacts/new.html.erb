@@ -1,6 +1,6 @@
 <h1>Hello world</h1>
 
-<h3>tMy contact page</h3>
+<h3>My contact page</h3>
 
 <%= form_with scope: :contact, url: contacts_path, local: true do |form| %>
   <% if @contact.errors.any? %>
@@ -44,5 +44,6 @@
 
 <h1>check all my contacts</h1>
 <%= link_to 'My contacts', controller: 'contacts' %>
+<%= link_to 'home', controller: 'home' %>
 
 <p><%= link_to 'Back', contacts_path %></p>
