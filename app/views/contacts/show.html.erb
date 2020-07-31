@@ -1,0 +1,32 @@
+<p>
+  <strong>Title:</strong>
+  <%= @contact.name %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @contact.email %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @contact.subject %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @contact.message %>
+</p>
+
+<%= link_to 'my contacts', controller: 'contacts' %>
+
+<h2> Comments </h2>
+  <%= render @contact.comments %>
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+
+<h2>add a new contact!</h2>
+<%= link_to 'New contact', new_contact_path %>
+<%= link_to 'edit', edit_contact_path(@contact) %>
+<%= link_to 'back', contacts_path %>

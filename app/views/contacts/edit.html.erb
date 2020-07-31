@@ -1,0 +1,47 @@
+<h1>Edit contact</h1>
+
+<%= form_with(model: @contact, local: true) do |form| %>
+
+  <% if @contact.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@contact.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @contact.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.label :email %><br>
+    <%= form.text_field :email %>
+  </p>
+
+  <p>
+    <%= form.label :subject %><br>
+    <%= form.text_field :subject %>
+  </p>
+
+  <p>
+    <%= form.label :message %><br>
+    <%= form.text_area :message %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+
+<h1>check all my contacts</h1>
+<%= link_to 'My contacts', controller: 'contacts' %>
+
+<p><%= link_to 'Back', contacts_path %></p>
