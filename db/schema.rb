@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_30_083503) do
+ActiveRecord::Schema.define(version: 2020_08_04_085714) do
 
   create_table "admin_replies", force: :cascade do |t|
     t.text "text"
@@ -30,15 +30,6 @@ ActiveRecord::Schema.define(version: 2020_07_30_083503) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
-  end
-
-  create_table "comments", force: :cascade do |t|
-    t.string "commenter"
-    t.text "body"
-    t.integer "contact_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["contact_id"], name: "index_comments_on_contact_id"
   end
 
   create_table "contacts", force: :cascade do |t|
@@ -68,5 +59,4 @@ ActiveRecord::Schema.define(version: 2020_07_30_083503) do
   end
 
   add_foreign_key "admin_replies", "contacts"
-  add_foreign_key "comments", "contacts"
 end

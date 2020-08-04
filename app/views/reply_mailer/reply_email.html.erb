@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+<h1>Hey <%= @contact.name %> you just received an email from Jean </h1>
+<p>
+  thank you for your comment, this is Jean's response <%= @contact.admin_reply.text %>.<br>
+</p>
+
+<p>Thanks you, and have a great day!</p>
+</body>
+</html>
