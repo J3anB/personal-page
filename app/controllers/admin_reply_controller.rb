@@ -7,14 +7,6 @@ class AdminReplyController < ApplicationController
     ReplyMailer.with(contact: @contact).reply_email.deliver_now
   end
 
-    # def create
-  #   contact = Contact.find(params[:id])
-  #   @reply = AdminReply.new
-  #   @reply.contact = contact
-  #   @reply.text = params[:reply][:text]
-  #   @reply.save
-  #   redirect_to contact_path(@contact)
-  # end
 
   private
 
