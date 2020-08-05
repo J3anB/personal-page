@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
+  get 'slack-connection', to: 'slack_connection#show'
+
   post 'contacts/:id', to: 'admin_reply#create'
 
 
