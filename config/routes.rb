@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   post 'contacts/:id', to: 'admin_reply#create'
 
+  post 'slack/reply', to: 'slack_command#reply'
+
 
   devise_for :users
 
