@@ -17,6 +17,8 @@ class SlackModalController < ApplicationController
 
     @contact = Contact.find(parsed_contact_id)
     @reply = @contact.create_admin_reply({text:parsed_reply})
+
+    modal_admin_notification
     # ReplyMailer.with(contact: @contact).reply_email.deliver_now
     # redirect_to contact_path(@contact)
 
@@ -110,6 +112,27 @@ class SlackModalController < ApplicationController
             }
         }
     )
+  end
+
+  def modal_admin_notification
+    Slack.configure do |config|
+      config.token = Rails.application.credentials.slack[:token]
+    end
+    client = Slack::Web::Client.new
+
+    client.chat_postMessage(
+        channel: '#building-a-slack-api',
+
+            "blocks": [
+                {
+                    "type": "section",
+                    "text": {
+                        "type": "mrkdwn",
+                        "text": "you have a new message check it <#{request.base_url}#{contact_path(@contact)}|here>"
+                    }
+                }
+            ],
+    as_user: true)
   end
 end
 
