@@ -7,7 +7,12 @@ class SlackModalController < ApplicationController
     if @parsed_payload['type'] == "view_submission"
       reply_submission
     elsif @parsed_payload['type'] == "block_actions"
-      open_modal
+      @contact = Contact.find(contact_id)
+      unless admin_reply_exist?
+        open_modal
+      else
+        admin_exist
+      end
     end
   end
 
@@ -17,7 +22,6 @@ class SlackModalController < ApplicationController
 
     AdminReplyService.save_reply(parsed_contact_id, {text: parsed_reply}, request.base_url)
   end
-
 
 
   private
@@ -102,6 +106,31 @@ class SlackModalController < ApplicationController
             }
         }
     )
+  end
+
+  def admin_exist
+    Slack.configure do |config|
+      config.token = Rails.application.credentials.slack[:token]
+    end
+    client = Slack::Web::Client.new
+
+    client.chat_postMessage(
+        channel: '#building-a-slack-api',
+
+        "blocks": [
+            {
+                "type": "section",
+                "text": {
+                    "type": "mrkdwn",
+                    "text": "you already responded to this message, check it <#{request.base_url}#{contact_path(@contact)}|here>"
+                }
+            }
+        ],
+        as_user: true)
+  end
+
+  def admin_reply_exist?
+    @contact.admin_reply
   end
 end
 

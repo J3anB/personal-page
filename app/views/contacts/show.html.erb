@@ -25,7 +25,7 @@
     </p>
 
 
-<% if current_user.admin %>
+<% if current_user.admin && !@contact.admin_reply %>
   <p>
     <%= form_with(scope: :reply, local: true) do |form| %>
       <%= form.label :text %><br>
