@@ -15,22 +15,12 @@ class SlackModalController < ApplicationController
     parsed_reply = @parsed_payload['view']['state']['values']['block_value']['action_value']['value']
     parsed_contact_id = @parsed_payload['view']['state']['values']['block_contact_id']['action_contact_id']['value']
 
-    @contact = Contact.find(parsed_contact_id)
-    @reply = @contact.create_admin_reply({text:parsed_reply})
-
-    modal_admin_notification
-    # ReplyMailer.with(contact: @contact).reply_email.deliver_now
-    # redirect_to contact_path(@contact)
-
-
+    AdminReplyService.save_reply(parsed_contact_id, {text: parsed_reply}, request.base_url)
   end
 
 
 
-
   private
-
-
 
   def contact_id
     @parsed_payload['actions'].first['value']
@@ -94,45 +84,24 @@ class SlackModalController < ApplicationController
                             "emoji": true
                         }
                     },
-                {
-                    "type": "input",
-                    "block_id": "block_contact_id",
-                    "element": {
-                        "action_id": "action_contact_id",
-                        "initial_value": contact_id,
-                        "type": "plain_text_input"
-                    },
-                    "label": {
-                        "type": "plain_text",
-                        "text": "Label",
-                        "emoji": true
-                    }
+                    {
+                        "type": "input",
+                        "block_id": "block_contact_id",
+                        "element": {
+                            "action_id": "action_contact_id",
+                            "initial_value": contact_id,
+                            "type": "plain_text_input"
+                        },
+                        "label": {
+                            "type": "plain_text",
+                            "text": "Label",
+                            "emoji": true
+                        }
                     }
                 ]
             }
         }
     )
-  end
-
-  def modal_admin_notification
-    Slack.configure do |config|
-      config.token = Rails.application.credentials.slack[:token]
-    end
-    client = Slack::Web::Client.new
-
-    client.chat_postMessage(
-        channel: '#building-a-slack-api',
-
-            "blocks": [
-                {
-                    "type": "section",
-                    "text": {
-                        "type": "mrkdwn",
-                        "text": "you have a new message check it <#{request.base_url}#{contact_path(@contact)}|here>"
-                    }
-                }
-            ],
-    as_user: true)
   end
 end
 
