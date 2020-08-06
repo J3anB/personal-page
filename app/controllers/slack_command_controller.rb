@@ -1,7 +1,7 @@
 class SlackCommandController < ApplicationController
+  skip_before_action :verify_authenticity_token, :authenticate_user!
 
   def reply
-    puts 'coucou petite perruche'
+    render :json => {'message': 'coucou petite perruche'}
   end
-
 end

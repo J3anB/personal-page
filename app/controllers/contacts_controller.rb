@@ -58,8 +58,6 @@ class ContactsController < ApplicationController
     end
     client = Slack::Web::Client.new
 
-    client.auth_test
-
     client.chat_postMessage(
         channel: '#building-a-slack-api',
 
@@ -102,7 +100,7 @@ class ContactsController < ApplicationController
                                 "text": "reply in slack",
                                 "emoji": true
                             },
-                            "value": "click_me_123"
+                            "value": "#{@contact.id}"
                         },
                         {
                             "type": "button",
@@ -112,7 +110,7 @@ class ContactsController < ApplicationController
                                 "text": "reply in my app",
                                 "emoji": true
                             },
-                            "value": "click_me_123"
+                            "value": "click_me_message"
                         },
                     ],
                 },
