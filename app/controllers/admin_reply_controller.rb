@@ -1,10 +1,8 @@
 class AdminReplyController < ApplicationController
 
   def create
-    @contact = Contact.find(params[:id])
-    @reply = @contact.create_admin_reply(reply_params)
-    ReplyMailer.with(contact: @contact).reply_email.deliver_now
-    redirect_to contact_path(@contact)
+    path = AdminReplyService.save_reply(params[:id], reply_params, request.base_url)
+    redirect_to path
   end
 
 

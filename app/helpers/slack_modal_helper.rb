@@ -1,0 +1,2 @@
+module SlackModalHelper
+end

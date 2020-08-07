@@ -3,8 +3,15 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
+  get 'slack-connection', to: 'slack_connection#show'
+
   post 'contacts/:id', to: 'admin_reply#create'
 
+  #Routes for slack reply messages
+  post 'slack/reply', to: 'slack_command#reply'
+
+  #routes for slack modals
+  post 'slack/open-modal', to: 'slack_modal#handle_slack_interaction'
 
   devise_for :users
 
