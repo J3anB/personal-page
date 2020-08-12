@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   get 'slack-connection', to: 'slack_connection#show'
 
+
   post 'contacts/:id', to: 'admin_reply#create'
 
   #Routes for slack reply messages
