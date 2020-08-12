@@ -40,6 +40,14 @@ gem 'async-websocket', '~> 0.8.0'
 #gem PostgreSQL
 gem 'pg'
 
+#gem Bootstrap
+gem 'bootstrap'
+
+#gem jquery-rails for bootstrap utility
+gem 'jquery-rails'
+
+#gem Fontawesome for bootstrap utility
+gem 'font-awesome-sass'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

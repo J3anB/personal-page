@@ -26,13 +26,13 @@
 
 
 <% if current_user.admin && !@contact.admin_reply %>
-  <p>
-    <%= form_with(scope: :reply, local: true) do |form| %>
+  <%= form_with(scope: :reply, local: true) do |form| %>
+    <div class="form-group">
       <%= form.label :text %><br>
-      <%= form.text_area :text %><br>
-      <%= form.submit %>
-    <% end %>
-  </p>
+      <%= form.text_area :text, class: "form-control" %><br>
+      <%= form.submit "submit", class: "btn btn-primary"%>
+    </div>
+  <% end %>
 <% end %>
 
 
