@@ -8,6 +8,13 @@
               <%= link_to 'my contacts', contacts_path, class:"btn btn-outline-light" %>
             <% end %>
           </div>
+          <div>
+            <i class="fas fa-cloud-sun"></i>
+            <div class="badge badge-light"><%= weather.city %></div>
+            <div class="badge badge-light"><%= weather.temperature %>°c</div>
+            <div class="badge badge-light"><%= weather.humidity %>%</div>
+            <div class="badge badge-light"><%= weather.description %></div>
+          </div>
           <div class="navbar-login">
             <% if user_signed_in? %>
                 <%= link_to('Logout', destroy_user_session_path, method: :delete, class:"btn btn-outline-light") %>
