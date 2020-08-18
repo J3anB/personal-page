@@ -1,5 +1,3 @@
-<h1>Hello world</h1>
-
 <h3>My contact page</h3>
 
 <%= form_with scope: :contact, url: contacts_path, local: true do |form| %>
@@ -12,38 +10,34 @@
       <ul>
         <% @contact.errors.full_messages.each do |msg| %>
           <li> <%= msg %></li>
-          <% end %>
+        <% end %>
       </ul>
     </div>
   <% end %>
 
-  <p>
-    <%= form.label :name %><br>
-    <%= form.text_field :name %>
-  </p>
-  <p>
-    <%= form.label :email %><br>
-    <%= form.text_field :email %>
-  </p>
+  <div>
+    <div class="form-group">
+      <%= form.label :name %><br>
+      <%= form.text_field :name, autofocus: true, autocomplete: "name", class: "form-control" %>
+    </div>
 
-  <p>
-    <%= form.label :subject %><br>
-    <%= form.text_field :subject %>
-  </p>
+    <div class="form-group">
+      <%= form.label :email %><br>
+      <%= form.text_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+    </div>
 
-  <p>
-    <%= form.label :message %><br>
-    <%= form.text_area :message %>
-  </p>
+    <div class="form-group">
+      <%= form.label :subject %><br>
+      <%= form.text_field :subject, autofocus: true, autocomplete: "subject", class: "form-control" %>
+    </div>
 
-  <p>
-    <%= form.submit %>
-  </p>
+    <div class="form-group">
+      <%= form.label :message %><br>
+      <%= form.text_area :message, autofocus: true, autocomplete: "subject", class: "form-control" %>
+    </div>
+
+    <%= link_to 'Back', contacts_path, class: "btn btn-outline-primary" %>
+    <%= link_to 'My contacts', {controller: 'contacts'}, class: "btn btn-outline-primary" %>
+    <%= form.submit "Submit", class: "btn btn-primary" %>
+  </div>
 <% end %>
-
-
-<h1>check all my contacts</h1>
-<%= link_to 'My contacts', controller: 'contacts' %>
-<%= link_to 'home', controller: 'home' %>
-
-<p><%= link_to 'Back', contacts_path %></p>

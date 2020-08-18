@@ -1,0 +1,32 @@
+<div class="pos-f-t">
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-dark p-1">
+      <h4 class="text-white">
+        <div class="navbar">
+          <div>
+            <% if user_signed_in? %>
+              <%= link_to 'my contacts', contacts_path, class:"btn btn-outline-light" %>
+            <% end %>
+          </div>
+          <div class="navbar-login">
+            <% if user_signed_in? %>
+                <%= link_to('Logout', destroy_user_session_path, method: :delete, class:"btn btn-outline-light") %>
+                <%= link_to('Edit registration', edit_user_registration_path, class:"btn btn-outline-light") %>
+            <% else %>
+                <%= link_to('Login', new_user_session_path, class:"btn btn-outline-light", "data-toggle":"modal", "data-target":"#exampleModalCenter") %>
+                <%= link_to('Register', new_user_registration_path, class:"btn btn-outline-light") %>
+            <% end %>
+          </div>
+        </div>
+      </h4>
+    </div>
+  </div>
+</div>
+<nav class="navbar navbar-dark bg-dark" style="background-color: #212121;">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</nav>
+
+<%= render "shared/login_modal" %>
+

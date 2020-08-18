@@ -1,50 +1,60 @@
-<p>
-  <strong>Title:</strong>
-  <%= @contact.name %>
-</p>
+<h2><i class="fas fa-id-card" class="table-dark"> <%= @contact.name %>'s card</i></h2>
 
-<p>
-  <strong>Name:</strong>
-  <%= @contact.email %>
-</p>
+<table class="table table-hover">
 
-<p>
-  <strong>Subject:</strong>
-  <%= @contact.subject %>
-</p>
+  <tbody>
 
-<p>
-  <strong>Message:</strong>
-  <%= @contact.message %>
-</p>
-<p>
-  <strong>Admin response:</strong>
-  <% if @contact.admin_reply %>
-    <%= @contact.admin_reply.text %>
-  <% end %>
-</p>
-
+  <tr>
+    <th scope="row"><i class="fas fa-id-card"> </i></th>
+    <td><%= @contact.name %></td>
+  </tr>
+  <tr>
+    <th scope="row"><i class="fas fa-at"></i></th>
+    <td><%= @contact.email %></td>
+  </tr>
+  <tr>
+    <th scope="row"><i class="fas fa-paperclip"></i></th>
+    <td colspan="2"><%= @contact.subject %></td>
+  </tr>
+  <tr>
+    <th scope="row"><i class="far fa-comment-dots"></i></th>
+    <td colspan="2"><%= @contact.message %></td>
+  </tr>
+  <tr>
+    <th scope="row"><i class="fas fa-reply"></i></th>
+    <td colspan="2">
+      <% if @contact.admin_reply %>
+        <%= @contact.admin_reply.text %>
+      <% end %></td>
+  </tr>
+  </tbody>
+</table>
 
 <% if current_user.admin && !@contact.admin_reply %>
-  <p>
-    <%= form_with(scope: :reply, local: true) do |form| %>
+  <%= form_with(scope: :reply, local: true) do |form| %>
+    <div class="form-group">
       <%= form.label :text %><br>
-      <%= form.text_area :text %><br>
-      <%= form.submit %>
-    <% end %>
-  </p>
+      <%= form.text_area :text, class: "form-control" %><br>
+      <%= form.submit "submit", class: "btn btn-outline-primary" %>
+    </div>
+  <% end %>
 <% end %>
 
 
-<%= link_to 'my contacts', controller: 'contacts' %>
-<%= link_to 'home', controller: 'home' %>
+
+<%= link_to 'back', contacts_path, class: "btn btn-outline-dark" %>
+<%= link_to 'my contacts', {controller: 'contacts'}, class: "btn btn-outline-primary" %>
+<%= link_to 'home', {controller: 'home'}, class: "btn btn-outline-primary" %>
 
 
-
-<h2>add a new contact!</h2>
-<%= link_to 'New contact', new_contact_path %>
+<%= link_to 'New contact', new_contact_path, class: "btn btn-outline-primary" %>
 
 <% if current_user.admin %>
-  <%= link_to 'edit', edit_contact_path(@contact) %>
+  <%= link_to 'edit', edit_contact_path(@contact), class: "btn btn-outline-primary" %>
 <% end %>
-<%= link_to 'back', contacts_path %>
+
+
+
+
+
+

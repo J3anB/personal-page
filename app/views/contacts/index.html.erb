@@ -1,33 +1,70 @@
+<!--<h1>Listing Contacts</h1>-->
 
-<h1>Listing Contacts</h1>
+<!--<table>-->
+<!--  <tr>-->
+<!--    <th>Name</th>-->
+<!--    <th>Email</th>-->
+<!--    <th>Subject</th>-->
+<!--    <th>Message</th>-->
+<!--    <th>Response</th>-->
+<!--    <th></th>-->
+<!--  </tr>-->
 
-<table>
+<%# @contacts.each do |contact| %>
+<!--    <tr>-->
+<!--      <td><%#= contact.name %></td>-->
+<!--      <td><%#= contact.email %></td>-->
+<!--      <td><%#= contact.subject %></td>-->
+<!--      <td><%#= contact.message %></td>-->
+
+<!--      <td><%#= link_to 'Show', contact_path(contact) %></td>-->
+<%# if current_user.admin %>
+<!--        <td><%#= link_to 'edit', edit_contact_path(contact) %></td>-->
+<!--        <td> <%#= link_to 'destroy', contact_path(contact), method: :delete, data: {confirm: 'are you sure?'}%></td>-->
+<%# end %>
+<!--    </tr>-->
+<%# end %>
+<!--</table>-->
+
+
+<lu><h2><i class="fas fa-id-card"> My contacts</i></h2></lu>
+<table class="table table-hover">
+  <thead>
   <tr>
-    <th>Name</th>
-    <th>Email</th>
-    <th>Subject</th>
-    <th>Message</th>
-    <th>Response</th>
-    <th></th>
+    <th scope="col">#</th>
+    <th scope="col">Name</th>
+    <th scope="col">Email</th>
+    <th scope="col">Subject</th>
+    <th scope="col">Message</th>
+    <th scope="col">Response</th>
+    <th scope="col"></th>
   </tr>
-
+  </thead>
+  <tbody>
   <% @contacts.each do |contact| %>
     <tr>
+      <th scope="row"><%= contact.id %></th>
       <td><%= contact.name %></td>
       <td><%= contact.email %></td>
       <td><%= contact.subject %></td>
       <td><%= contact.message %></td>
-
-      <td><%= link_to 'Show', contact_path(contact) %></td>
-      <% if current_user.admin %>
-        <td><%= link_to 'edit', edit_contact_path(contact) %></td>
-        <td> <%= link_to 'destroy', contact_path(contact), method: :delete, data: {confirm: 'are you sure?'}%></td>
-    <% end %>
+      <td>
+        <% if contact.admin_reply %>
+          <%= contact.admin_reply.text %>
+        <% end %></td>
+      <td><a href="<%= contact_path(contact) %>"><i class="far fa-eye"></i></a>
+        <% if current_user.admin %>
+          <a href="<%= edit_contact_path(contact) %>"><i class="fas fa-edit"></i></a>
+          <a href="<%= contact_destroy_path(contact) %>" onclick="confirm('are you sure?')" data-method="delete">
+            <i class="far fa-trash-alt"></i></a>
+        <% end %>
+      </td>
     </tr>
   <% end %>
+
+  </tbody>
 </table>
-
-
 <h1>add a new contact!</h1>
-<%= link_to 'New contact', new_contact_path %>
-<%= link_to 'home', controller: 'home' %>
+<%= link_to 'New contact', new_contact_path, class:"btn btn-outline-primary" %>
+<%= link_to 'home', {controller: 'home'}, class:"btn btn-outline-primary"%>
+
