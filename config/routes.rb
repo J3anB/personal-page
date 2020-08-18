@@ -8,6 +8,9 @@ Rails.application.routes.draw do
 
   post 'contacts/:id', to: 'admin_reply#create'
 
+  #Routes to destroy contact
+  delete 'contacts/:id', to: 'contacts#destroy', as: :contact_destroy
+
   #Routes for slack reply messages
   post 'slack/reply', to: 'slack_command#reply'
 
@@ -20,6 +23,7 @@ Rails.application.routes.draw do
 
   resources :contacts do
     resources :admin_reply
+
   end
 
 end
