@@ -1,33 +1,5 @@
-<!--<h1>Listing Contacts</h1>-->
+<h2><i class="fas fa-id-card"> My contacts</i></h2>
 
-<!--<table>-->
-<!--  <tr>-->
-<!--    <th>Name</th>-->
-<!--    <th>Email</th>-->
-<!--    <th>Subject</th>-->
-<!--    <th>Message</th>-->
-<!--    <th>Response</th>-->
-<!--    <th></th>-->
-<!--  </tr>-->
-
-<%# @contacts.each do |contact| %>
-<!--    <tr>-->
-<!--      <td><%#= contact.name %></td>-->
-<!--      <td><%#= contact.email %></td>-->
-<!--      <td><%#= contact.subject %></td>-->
-<!--      <td><%#= contact.message %></td>-->
-
-<!--      <td><%#= link_to 'Show', contact_path(contact) %></td>-->
-<%# if current_user.admin %>
-<!--        <td><%#= link_to 'edit', edit_contact_path(contact) %></td>-->
-<!--        <td> <%#= link_to 'destroy', contact_path(contact), method: :delete, data: {confirm: 'are you sure?'}%></td>-->
-<%# end %>
-<!--    </tr>-->
-<%# end %>
-<!--</table>-->
-
-
-<lu><h2><i class="fas fa-id-card"> My contacts</i></h2></lu>
 <table class="table table-hover">
   <thead>
   <tr>
@@ -65,6 +37,6 @@
   </tbody>
 </table>
 <h1>add a new contact!</h1>
-<%= link_to 'New contact', new_contact_path, class:"btn btn-outline-primary" %>
-<%= link_to 'home', {controller: 'home'}, class:"btn btn-outline-primary"%>
+<%= link_to 'New contact', new_contact_path, class: "btn btn-outline-primary" %>
+<%= link_to 'home', {controller: 'home'}, class: "btn btn-outline-primary" %>
 
