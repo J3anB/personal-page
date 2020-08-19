@@ -5,23 +5,25 @@
         <div class="navbar">
           <div>
             <% if user_signed_in? %>
-              <%= link_to 'my contacts', contacts_path, class:"btn btn-outline-light" %>
+              <%= link_to 'my contacts', contacts_path, class: "btn btn-outline-light" %>
             <% end %>
           </div>
           <div>
             <i class="fas fa-cloud-sun"></i>
-            <div class="badge badge-light"><%= weather.city %></div>
-            <div class="badge badge-light"><%= weather.temperature %>°c</div>
-            <div class="badge badge-light"><%= weather.humidity %>%</div>
-            <div class="badge badge-light"><%= weather.description %></div>
+            <div class="badge badge-light" id="weather_city"><%= weather.city %></div>
+            <div class="badge badge-light" id="weather_temperature"><%= weather.temperature %></div>
+            <div class="badge badge-light" id="weather_humidity"><%= weather.humidity %></div>
+            <div class="badge badge-light" id="weather_description"><%= weather.description %></div>
+            <button class="btn btn-outline-light" id="weather_button" data-link="<%= weather_request_path %>"> refresh
+            </button>
           </div>
           <div class="navbar-login">
             <% if user_signed_in? %>
-                <%= link_to('Logout', destroy_user_session_path, method: :delete, class:"btn btn-outline-light") %>
-                <%= link_to('Edit registration', edit_user_registration_path, class:"btn btn-outline-light") %>
+              <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "btn btn-outline-light") %>
+              <%= link_to('Edit registration', edit_user_registration_path, class: "btn btn-outline-light") %>
             <% else %>
-                <%= link_to('Login', new_user_session_path, class:"btn btn-outline-light", "data-toggle":"modal", "data-target":"#exampleModalCenter") %>
-                <%= link_to('Register', new_user_registration_path, class:"btn btn-outline-light") %>
+              <%= link_to('Login', new_user_session_path, class: "btn btn-outline-light", "data-toggle": "modal", "data-target": "#exampleModalCenter") %>
+              <%= link_to('Register', new_user_registration_path, class: "btn btn-outline-light") %>
             <% end %>
           </div>
         </div>
@@ -34,6 +36,6 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 </nav>
-
+<%= javascript_pack_tag 'weather' %>
 <%= render "shared/login_modal" %>
 

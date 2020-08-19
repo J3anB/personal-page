@@ -12,7 +12,7 @@ module ApplicationHelper
   end
 
   def weather
-    Weather.order(created_at: :desc).first
+    WeatherService.get_last_weather
   end
 
 end

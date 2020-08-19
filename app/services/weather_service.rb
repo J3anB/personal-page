@@ -16,10 +16,23 @@ class WeatherService
   def parse_perform(raw_json)
     weather = Weather.new
     parsed_perform = JSON.parse(raw_json)
-    weather.city = parsed_perform['name']
-    weather.temperature = parsed_perform['main']['temp']
-    weather.humidity = parsed_perform['main']['humidity'].to_i
-    weather.description = parsed_perform['weather'].first['description']
-    weather.save!
+    if parsed_perform['cod'].nil?
+      weather.city = parsed_perform['name']
+      weather.temperature = parsed_perform['main']['temp']
+      weather.humidity = parsed_perform['main']['humidity'].to_i
+      weather.description = parsed_perform['weather'].first['description']
+      weather.save!
+    else
+      Rails.logger.error('to many requests')
+    end
   end
+
+  def get_weather(city_id)
+    parse_perform(query(city_id))
+  end
+
+  def self.get_last_weather
+    Weather.order(created_at: :desc).first
+  end
+
 end
