@@ -1,10 +1,10 @@
 class Weather < ApplicationRecord
 
-  def humidity
-    "#{self[:humidity]}%"
-  end
+  # def humidity
+  #   "#{self[:humidity]}%"
+  # end
 
-  def temperature
-    "#{self[:temperature]}°c"
-  end
+  # def temperature
+  #   "#{self[:temperature]}°c"
+  # end
 end

@@ -8,6 +8,10 @@ Rails.application.routes.draw do
   #routes for weather refresh API button
   get 'weather/request', to: 'weather#weather_request', as: :weather_request
 
+  #routes for weather chart
+  get 'weather/chart_request', to: 'weather#weather_chart_request', as: :weather_chart
+
+
   post 'contacts/:id', to: 'admin_reply#create'
 
   #Routes to destroy contact

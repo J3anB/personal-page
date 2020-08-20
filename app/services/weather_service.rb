@@ -35,4 +35,7 @@ class WeatherService
     Weather.order(created_at: :desc).first
   end
 
+  def self.get_all_weather
+    Weather.order(created_at: :asc)
+  end
 end

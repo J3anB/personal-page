@@ -5,4 +5,8 @@ class WeatherController < ApplicationController
     WeatherWorker.new.perform(2998324)
     render :json => WeatherService.get_last_weather
   end
+
+  def weather_chart_request
+    render :json => WeatherService.get_all_weather
+  end
 end

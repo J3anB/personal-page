@@ -10,11 +10,14 @@
           </div>
           <div>
             <i class="fas fa-cloud-sun"></i>
-            <div class="badge badge-light" id="weather_city"><%= weather.city %></div>
-            <div class="badge badge-light" id="weather_temperature"><%= weather.temperature %></div>
-            <div class="badge badge-light" id="weather_humidity"><%= weather.humidity %></div>
-            <div class="badge badge-light" id="weather_description"><%= weather.description %></div>
-            <button class="btn btn-outline-light" id="weather_button" data-link="<%= weather_request_path %>"> refresh
+            <div class="badge badge-dark" id="weather_city"><%= weather.city %></div>
+            <div class="badge badge-dark" id="weather_temperature"><%= weather.temperature %></div>
+            <div class="badge badge-dark" id="weather_humidity"><%= weather.humidity %></div>
+            <div class="badge badge-dark" id="weather_description"><%= weather.description %></div>
+            <button class="btn btn-sm btn-outline-light" id="weather_button" data-link="<%= weather_request_path %>"> refresh
+            </button>
+            <button type="button" class="btn btn-sm btn-outline-light" id="openWeatherModal">
+              weather history
             </button>
           </div>
           <div class="navbar-login">
@@ -38,4 +41,5 @@
 </nav>
 <%= javascript_pack_tag 'weather' %>
 <%= render "shared/login_modal" %>
+<%= render "shared/weather_modal" %>
 
