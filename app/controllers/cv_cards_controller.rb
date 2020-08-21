@@ -1,0 +1,2 @@
+class CvCardsController < ApplicationController
+end

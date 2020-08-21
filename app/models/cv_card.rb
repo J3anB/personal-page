@@ -1,0 +1,2 @@
+class CvCard < ApplicationRecord
+end

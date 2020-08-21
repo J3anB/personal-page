@@ -1,0 +1,2 @@
+module CvCardsHelper
+end

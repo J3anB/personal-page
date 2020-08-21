@@ -9,11 +9,11 @@ $(document).ready(function () {
     $('#exampleModal').on('shown.bs.modal', function () {
         initChart()
     });
-    $('button#openWeatherModal').on('click',
-        function () {
-            $('#exampleModal').modal()
-        }
-    );
+    // $('button#openWeatherModal').on('click',
+    //     function () {
+    //         $('#exampleModal').modal()
+    //     }
+    // );
     $('button#weather_button').on(
         'click',
         function () {
@@ -40,9 +40,9 @@ function initChart() {
     dataChart().then(data => {
         var ctx = document.getElementById('myChart');
         var myChart = new Chart(ctx, {
+            type: 'line',
             data: {
                 datasets: [{
-                    type: 'line',
                     label: 'temperature',
                     data: iterTemperatureData(data),
                     backgroundColor: 'rgba(0, 0, 0, 0)',
@@ -51,11 +51,10 @@ function initChart() {
                 }, {
                     label: 'humidity',
                     data: iterHumidityData(data),
-                    backgroundColor: 'rgba(0, 0, 0, 0.2)',
+                    backgroundColor: 'rgba(0, 0, 0, 0)',
                     borderColor: 'rgb(81,88,240)',
                     borderWidth: 1,
                     yAxisID: 'humidityAxes',
-                    type: 'bar'
                 }],
             },
             options: {
@@ -69,7 +68,6 @@ function initChart() {
                     yAxes: [{
                         ticks: {
                             stepSize: 0.20,
-                            beginAtZero: true
                         }
                     },
                         {
@@ -109,3 +107,4 @@ function iterHumidityData(rawData) {
     });
     return finalData;
 }
+
