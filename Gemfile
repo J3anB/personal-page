@@ -49,6 +49,13 @@ gem 'jquery-rails'
 #gem Fontawesome for bootstrap utility
 gem 'font-awesome-sass'
 
+#------------------------------
+#Gem Sidekiq
+gem 'sidekiq'
+
+#------------------------------
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

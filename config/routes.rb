@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
-  get 'home/index'
+  get 'home/index', as: :home
 
   root 'home#index'
 
   get 'slack-connection', to: 'slack_connection#show'
+
+  #routes for weather refresh API button
+  get 'weather/request', to: 'weather#weather_request', as: :weather_request
+
+  #routes for weather chart
+  get 'weather/chart_request', to: 'weather#weather_chart_request', as: :weather_chart
 
 
   post 'contacts/:id', to: 'admin_reply#create'

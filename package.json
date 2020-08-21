@@ -2,15 +2,16 @@
   "name": "personal_page",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
-    "@rails/webpacker": "4.2.2",
+    "@rails/webpacker": "^5.2.1",
     "bootstrap": ">=4.1.2",
-    "popper.js": "^1.16.1",
+    "chart.js": "^2.9.3",
     "jquery": "^3.5.0",
-    "turbolinks": "^5.2.0",
-    "@fortawesome/fontawesome-free": "^5.13.0"
+    "popper.js": "^1.16.1",
+    "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",
   "devDependencies": {
