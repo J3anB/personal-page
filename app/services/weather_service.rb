@@ -16,7 +16,7 @@ class WeatherService
   def parse_perform(raw_json)
     weather = Weather.new
     parsed_perform = JSON.parse(raw_json)
-    if parsed_perform['cod'].nil?
+    if parsed_perform['cod'] == 200
       weather.city = parsed_perform['name']
       weather.temperature = parsed_perform['main']['temp']
       weather.humidity = parsed_perform['main']['humidity'].to_i

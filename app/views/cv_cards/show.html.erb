@@ -1,0 +1,32 @@
+<h2><i class="fas fa-newspaper" class="table-dark"> <%= @cv_card.business %>'s card </i></h2>
+
+<ul class="list-group list-group-flush" style="max-width: 25rem">
+  <!--  <li class="list-group-item cv-title toggle-button" title="Popover title" data-content='<a href="<%#= cv_card.link %>" target="_blank"> <%#= cl_image_tag(cv_card.picture, :width => 250, :crop => "fill") %> </a>'><%#= cv_card.business %></li>-->
+  <li class="list-group-item cv-date"><%= @cv_card.date %></li>
+  <div class="list-group-item text-style">
+    <li><%= @cv_card.job %></li>
+    <li><%= @cv_card.competence %></li>
+    <% unless @cv_card.competence_two.empty? %>
+      <li><%= @cv_card.competence_two %></li>
+    <% end %>
+    <% unless @cv_card.competence_three.empty? %>
+      <li><%= @cv_card.competence_three %></li>
+    <% end %>
+    <% unless @cv_card.competence_four.empty? %>
+      <li><%= @cv_card.competence_four %></li>
+    <% end %>
+    <% unless @cv_card.competence_five.empty? %>
+      <li><%= @cv_card.competence_five %></li>
+    <% end %>
+  </div>
+</ul>
+
+<% if current_user.admin %>
+  <%= link_to 'edit', edit_cv_card_path(@cv_card), class: "btn btn-outline-success" %>
+<% end %>
+<% if current_user.admin %>
+  <%= link_to 'delete', cv_card_destroy_path(@cv_card), class: "btn btn-outline-danger", method: "delete" %>
+<% end %>
+<%= link_to 'back', contacts_path, class: "btn btn-outline-dark" %>
+<%= link_to 'CV cards', {controller: 'cv_cards'}, class: "btn btn-outline-primary" %>
+<%= link_to 'home', {controller: 'home'}, class: "btn btn-outline-primary" %>

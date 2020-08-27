@@ -1,0 +1,6 @@
+<% if current_user != nil and current_user.admin %>
+  <%= link_to 'new cv', {controller: '/cv_cards', action: 'new'}, class: "btn btn-outline-secondary" %>
+<% end %>
+
+<!--si 'current_user n'est pas NIl, ET s'il nest pas 'admin'
+ ne pas afficher le boutton -->

@@ -1,0 +1,23 @@
+<ul class="list-group list-group-flush" style="max-width: 25rem">
+  <li class="list-group-item cv-title"><%= cv_competence.title %></li>
+  <div class="list-group-item text-style">
+    <li><%= cv_competence.info %></li>
+    <% unless cv_competence.info_two.empty? %>
+      <li><%= cv_competence.info_two %></li>
+    <% end %>
+    <% unless cv_competence.info_three.empty? %>
+      <li><%= cv_competence.info_three %></li>
+    <% end %>
+    <% unless cv_competence.info_four.empty? %>
+      <li><%= cv_competence.info_four %></li>
+    <% end %>
+    <% unless cv_competence.info_five.empty? %>
+      <li><%= cv_competence.info_five %></li>
+    <% end %>
+  </div>
+  <a type="button" data-toggle="modal" data-target="#deleteModal<%= cv_competence.id %>">
+    <i class="far fa-trash-alt"></i></a>
+</ul>
+
+
+<%= render partial: "shared/delete_modal", locals: {link_to_delete: url_for(cv_competence_destroy_path(cv_competence)), id: cv_competence.id} %>

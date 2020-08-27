@@ -5,18 +5,22 @@
         <div class="navbar">
           <div>
             <% if user_signed_in? %>
+              <%= link_to 'home', home_path, class: "btn btn-outline-light" %>
               <%= link_to 'my contacts', contacts_path, class: "btn btn-outline-light" %>
+              <%= link_to 'my cv', cv_cards_path, class: "btn btn-outline-light" %>
+              <%= link_to 'my competences', cv_competences_path, class: "btn btn-outline-light" %>
             <% end %>
           </div>
           <div>
             <i class="fas fa-cloud-sun"></i>
             <div class="badge badge-dark" id="weather_city"><%= weather.city %></div>
-            <div class="badge badge-dark" id="weather_temperature"><%= weather.temperature %></div>
-            <div class="badge badge-dark" id="weather_humidity"><%= weather.humidity %></div>
+            <div class="badge badge-dark" id="weather_temperature"><%= weather.temperature %>°c</div>
+            <div class="badge badge-dark" id="weather_humidity"><%= weather.humidity %>%</div>
             <div class="badge badge-dark" id="weather_description"><%= weather.description %></div>
-            <button class="btn btn-sm btn-outline-light" id="weather_button" data-link="<%= weather_request_path %>"> refresh
+            <button class="btn btn-sm btn-outline-light" id="weather_button" data-link="<%= weather_request_path %>">
+              refresh
             </button>
-            <button type="button" class="btn btn-sm btn-outline-light" data-toggle="modal" data-target="#exampleModal" >
+            <button type="button" class="btn btn-sm btn-outline-light" data-toggle="modal" data-target="#exampleModal">
               weather history
             </button>
           </div>
@@ -28,6 +32,9 @@
               <%= link_to('Login', new_user_session_path, class: "btn btn-outline-light", "data-toggle": "modal", "data-target": "#exampleModalCenter") %>
               <%= link_to('Register', new_user_registration_path, class: "btn btn-outline-light") %>
             <% end %>
+            <%= render "shared/cv_edit" %>
+            <%= render "shared/cv_competence_new" %>
+
           </div>
         </div>
       </h4>
@@ -39,7 +46,6 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 </nav>
-<%= javascript_pack_tag 'weather' %>
+
 <%= render "shared/login_modal" %>
 <%= render "shared/weather_modal" %>
-
