@@ -1,0 +1,28 @@
+// Place all the styles related to the cv_competences controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+li {
+  list-style-type: circle;
+}
+
+.list-group-flush > .list-group-item.cv-title {
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: serif;
+  font-weight: bold;
+  border-top: 1.5px solid #ade8f4;
+  border-bottom: 1px solid #ade8f4;
+  margin-top: 20px;
+}
+.list-group-flush > .list-group-item.cv-date{
+  text-align: center;
+  font-size: 0.9rem;
+  font-family: serif;
+  font-weight: lighter;
+  //border-top: 1px solid #ade8f4;
+  border-bottom: 1px solid #ade8f4;
+  //margin-top: 10px;
+}
+.text-style {
+  margin-bottom: 10px;
+}

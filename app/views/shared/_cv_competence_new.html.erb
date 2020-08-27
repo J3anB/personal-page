@@ -1,0 +1,3 @@
+<% if current_user != nil and current_user.admin %>
+  <%= link_to 'new cv competence', {controller: '/cv_competences', action: 'new'}, class: "btn btn-outline-secondary" %>
+<% end %>

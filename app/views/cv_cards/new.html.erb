@@ -1,6 +1,6 @@
-<h1><i class="far fa-newspaper"> </i>  <%= @cv_card.business%> Curriculum vitæ edit</h1>
+<h2>Curriculum vitæ edit</h2>
 
-<%= form_with(model: @cv_card, local: true) do |form| %>
+<%= form_with(scope: :cv_card, url: cv_card_create_path, local: true) do |form| %>
 
 
   <div class="cv-modal">
@@ -26,27 +26,27 @@
 
     <div class="form-group">
       <%= form.label :competence_two %><br>
-      <%= form.text_field :competence_two, autofocus: true, autocomplete: "competence_two", class: "form-control" %>
+      <%= form.text_field :competence_two, autofocus: true, autocomplete: "competence", class: "form-control" %>
     </div>
 
     <div class="form-group">
       <%= form.label :competence_three %><br>
-      <%= form.text_field :competence_three, autofocus: true, autocomplete: "competence_three", class: "form-control" %>
+      <%= form.text_field :competence_three, autofocus: true, autocomplete: "competence", class: "form-control" %>
     </div>
 
     <div class="form-group">
       <%= form.label :competence_four %><br>
-      <%= form.text_field :competence_four, autofocus: true, autocomplete: "competence_four", class: "form-control"%>
+      <%= form.text_field :competence_four, autofocus: true, autocomplete: "competence", class: "form-control"%>
     </div>
 
     <div class="form-group">
       <%= form.label :competence_five %><br>
-      <%= form.text_area :competence_five, autofocus: true, autocomplete: "competence_five", class: "form-control" %>
+      <%= form.text_area :competence_five, autofocus: true, autocomplete: "competence", class: "form-control" %>
     </div>
 
     <div class="form-group">
       <%= form.label :link %><br>
-      <%= form.text_field :link, autofocus: true, autocomplete: "link", class: "form-control" %>
+      <%= form.text_field :link, autofocus: true, autocomplete: "competence", class: "form-control" %>
     </div>
 
 

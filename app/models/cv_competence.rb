@@ -1,0 +1,2 @@
+class CvCompetence < ApplicationRecord
+end

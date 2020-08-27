@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get 'home/index', as: :home
 
   root 'home#index'
@@ -11,7 +12,22 @@ Rails.application.routes.draw do
   #routes for weather chart
   get 'weather/chart_request', to: 'weather#weather_chart_request', as: :weather_chart
 
+  #routes for cv card
+  get 'cv_card/new', to: 'cv_cards#new'
 
+  post 'cv_card/create', to: 'cv_cards#create'
+
+  delete 'cv_cards/:id', to: 'cv_cards#destroy', as: :cv_card_destroy
+
+  #routes for competence card
+
+  get 'cv_competence/new', to: 'cv_competences#new'
+
+  post 'cv_competence/create', to: 'cv_competences#create'
+
+  delete 'cv_competence/:id', to: 'cv_competences#destroy', as: :cv_competence_destroy
+
+  #routes for contact admin reply
   post 'contacts/:id', to: 'admin_reply#create'
 
   #Routes to destroy contact
@@ -31,5 +47,8 @@ Rails.application.routes.draw do
     resources :admin_reply
 
   end
+
+  resources :cv_cards
+  resources :cv_competences
 
 end
