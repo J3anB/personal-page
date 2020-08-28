@@ -1,8 +1,10 @@
-<ul class="list-group list-group-flush" style="max-width: 25rem">
+<ul class="list-group list-group-flush">
   <li class="list-group-item cv-title"><%= cv_competence.title %></li>
 
   <div class="list-group-item text-style">
-    <li><%= cv_competence.info %></li>
+    <% unless cv_competence.info.empty? %>
+      <li><%= cv_competence.info %></li>
+    <% end %>
     <% unless cv_competence.info_two.empty? %>
       <li><%= cv_competence.info_two %></li>
     <% end %>
@@ -18,10 +20,12 @@
   </div>
 
   <div>
-    <a href="<%= cv_competence_path(cv_competence) %>"><i class="far fa-eye"></i></a>
-    <a href="<%= edit_cv_competence_path(cv_competence) %>"><i class="fas fa-edit"></i></a>
-    <a type="button" data-toggle="modal" data-target="#deleteModal<%= cv_competence.id %>">
-      <i class="far fa-trash-alt"></i></a>
+    <% if !current_user.nil? && current_user.admin %>
+      <a href="<%= cv_competence_path(cv_competence) %>"><i class="far fa-eye"></i></a>
+      <a href="<%= edit_cv_competence_path(cv_competence) %>"><i class="fas fa-edit"></i></a>
+      <a type="button" data-toggle="modal" data-target="#deleteModal<%= cv_competence.id %>">
+        <i class="far fa-trash-alt"></i></a>
+    <% end %>
   </div>
 </ul>
 

@@ -3,7 +3,9 @@
 <ul class="list-group list-group-flush" style="max-width: 25rem">
   <li class="list-group-item cv-date"><%= @cv_competence.title %></li>
   <div class="list-group-item text-style">
-    <li><%= @cv_competence.info %></li>
+    <% unless @cv_competence.info.empty? %>
+      <li><%= @cv_competence.info %></li>
+    <% end %>
     <% unless @cv_competence.info_two.empty? %>
       <li><%= @cv_competence.info_two %></li>
     <% end %>
@@ -27,8 +29,8 @@
     delete
   </button>
 <% end %>
-<%= link_to 'back', contacts_path, class: "btn btn-outline-dark" %>
-<%= link_to 'CV cards', {controller: 'cv_cards'}, class: "btn btn-outline-primary" %>
+<%= link_to 'back', :back, class: "btn btn-outline-dark" %>
+<%= link_to 'CV competences', {controller: 'cv_competences'}, class: "btn btn-outline-primary" %>
 <%= link_to 'home', {controller: 'home'}, class: "btn btn-outline-primary" %>
 
 

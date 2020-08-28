@@ -40,14 +40,16 @@
   <% end %>
 <% end %>
 
-<%= link_to 'back', contacts_path, class: "btn btn-outline-dark" %>
-<%= link_to 'my contacts', {controller: 'contacts'}, class: "btn btn-outline-primary" %>
-<%= link_to 'home', {controller: 'home'}, class: "btn btn-outline-primary" %>
-<%= link_to 'New contact', new_contact_path, class: "btn btn-outline-primary" %>
 
-<% if current_user.admin %>
-  <%= link_to 'edit', edit_contact_path(@contact), class: "btn btn-outline-primary" %>
-<% end %>
+
+<div class="shared-buttons">
+  <%= link_to 'New contact', new_contact_path, class: "btn btn-outline-secondary" %>
+  <% if current_user.admin %>
+    <%= link_to 'edit', edit_contact_path(@contact), class: "btn btn-outline-secondary" %>
+  <% end %>
+  <%= render "shared/shared_buttons" %>
+</div>
+
 
 
 

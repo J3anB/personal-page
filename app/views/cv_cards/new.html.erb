@@ -36,7 +36,7 @@
 
     <div class="form-group">
       <%= form.label :competence_four %><br>
-      <%= form.text_field :competence_four, autofocus: true, autocomplete: "competence", class: "form-control"%>
+      <%= form.text_field :competence_four, autofocus: true, autocomplete: "competence", class: "form-control" %>
     </div>
 
     <div class="form-group">
@@ -49,17 +49,18 @@
       <%= form.text_field :link, autofocus: true, autocomplete: "competence", class: "form-control" %>
     </div>
 
-
-
     <div class="custom-file">
       <%= form.file_field :file, class: "custom-file-input", id: "customFileLang" %>
       <%= form.label 'picture', class: "custom-file-label", for: "customFileLang" %>
-
     </div>
 
-    <%= link_to 'Back', contacts_path, class: "btn-sm btn-outline-secondary" %>
-    <%= link_to 'My contacts', {controller: 'contacts'}, class: "btn-sm btn-outline-secondary" %>
-    <%= form.submit "Submit", class: "btn-sm btn-outline-secondary" %>
 
+    <div>
+      <div class="shared-buttons">
+        <%= form.submit "Submit", class: "btn btn-sm btn-outline-secondary" %>
+        <%= render "shared/shared_buttons" %>
+      </div>
+    </div>
   </div>
+
 <% end %>
