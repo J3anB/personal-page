@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div class="modal fade" id="deleteModal<%= id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="deleteModal<%= object_to_delete.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -9,7 +9,7 @@
         </button>
       </div>
       <div class="modal-body">
-        do you confirm ?
+        vous êtes sur le point de supprimer <%= object_to_delete.class %> avec l'id <%= object_to_delete.id %>?
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -19,3 +19,4 @@
   </div>
 </div>
 
+<!-- dans le button on ajoute dans le 'href' le lien 'link_to_delete' qui pemets d'envoyer une requête lié au bon élément'-->

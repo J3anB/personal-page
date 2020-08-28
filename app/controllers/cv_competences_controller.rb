@@ -8,6 +8,10 @@ class CvCompetencesController < ApplicationController
     @cv_competence = CvCompetence.find(params[:id])
   end
 
+  def edit
+    @cv_competence = CvCompetence.find(params[:id])
+  end
+
   def new
     @cv_competence = CvCompetence.new
   end
@@ -22,10 +26,19 @@ class CvCompetencesController < ApplicationController
     end
   end
 
-  def destroy
+  def update
     @cv_competence = CvCompetence.find(params[:id])
-    @cv_competence.destroy
 
+    if @cv_competence.update(cv_competence_params)
+      redirect_to @cv_competence
+    else
+      render 'edit'
+    end
+  end
+
+
+  def destroy
+    CvCompetence.find(params[:id]).destroy
     redirect_to cv_competences_path
   end
 
