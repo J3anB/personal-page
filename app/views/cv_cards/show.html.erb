@@ -25,8 +25,13 @@
   <%= link_to 'edit', edit_cv_card_path(@cv_card), class: "btn btn-outline-success" %>
 <% end %>
 <% if current_user.admin %>
-  <%= link_to 'delete', cv_card_destroy_path(@cv_card), class: "btn btn-outline-danger", method: "delete" %>
+  <button class="btn btn-outline-danger" data-toggle="modal" data-target="#deleteModal<%= @cv_card.id %>">
+    delete
+  </button>
 <% end %>
 <%= link_to 'back', contacts_path, class: "btn btn-outline-dark" %>
 <%= link_to 'CV cards', {controller: 'cv_cards'}, class: "btn btn-outline-primary" %>
 <%= link_to 'home', {controller: 'home'}, class: "btn btn-outline-primary" %>
+
+<%= render partial: "shared/delete_modal", locals: {link_to_delete: url_for(cv_card_destroy_path(@cv_card)), object_to_delete: @cv_card} %>
+

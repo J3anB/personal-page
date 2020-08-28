@@ -32,12 +32,12 @@
         <% end %>
       </td>
     </tr>
-    <%= render partial: "shared/delete_modal",  locals: {link_to_delete: url_for(contact_destroy_path(contact)), id: contact.id} %>
+    <%= render partial: "shared/delete_modal",  locals: {link_to_delete: url_for(contact_destroy_path(contact)), object_to_delete: contact} %>
   <% end %>
 
   </tbody>
 </table>
 <h1>add a new contact!</h1>
-<%= link_to 'New contact', new_contact_path, class: "btn btn-outline-primary" %>
-<%= link_to 'home', {controller: 'home'}, class: "btn btn-outline-primary" %>
+<%= link_to 'New contact', new_contact_path, class: "btn btn-outline-secondary" %>
+<%= link_to 'home', {controller: 'home'}, class: "btn btn-outline-seconday" %>
 

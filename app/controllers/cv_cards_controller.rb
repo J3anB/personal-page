@@ -42,9 +42,7 @@ class CvCardsController < ApplicationController
 
 
   def destroy
-    @cv_card = CvCard.find(params[:id])
-    @cv_card.destroy
-
+    CvCard.find(params[:id]).destroy
     redirect_to cv_cards_path
   end
 
