@@ -1,0 +1,64 @@
+<h1>
+  <%= @room.name %>
+</h1>
+
+<div class="row">
+  <div class="col-12 col-md-3">
+    <%= render partial: 'shared/rooms' %>
+  </div>
+
+  <div class="col">
+    <div class="chat" data-channel-subscribe="room" data-room-id="<%= @room.id %>">
+      <% @room_messages.each do |room_message| %>
+        <div class="chat-message-container">
+          <div class="row no-gutters">
+            <div class="col-auto text-center">
+            </div>
+
+            <div class="col">
+              <div class="message-content">
+                <p class="mb-1">
+                  <%= room_message.message %>
+                </p>
+
+                <div class="text-right">
+                  <small>
+                    <%= room_message.created_at %>
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <%= form_with(model: @room_message, local: true) do |form| %>
+      <div class="input-group mb-3">
+        <%= form.text_area :message, autofocus: true, id: "new_room_message", autocomplete: "message", class: "form-control chat-input", required: true %>
+        <div class="input-group-append">
+          <%= form.submit "Send", class: 'btn btn-dark chat-input' %>
+        </div>
+      </div>
+
+      <%= form.hidden_field :room_id, autofocus: true, autocomplete: "name" %>
+    <% end %>
+  </div>
+</div>
+<div class="d-none" data-role="message-template">
+  <div class="chat-message-container">
+    <div class="row no-gutters">
+      <div class="col-auto text-center">
+        <img src="" class="avatar" alt="" data-role="user-avatar">
+      </div>
+      <div class="col">
+        <div class="message-content">
+          <p class="mb-1" data-role="message-text"></p>
+
+          <div class="text-right">
+            <small data-role="message-date"></small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

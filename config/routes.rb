@@ -51,4 +51,9 @@ Rails.application.routes.draw do
   resources :cv_cards
   resources :cv_competences
 
+  #rooting for ChatRoom
+
+  resources :room_messages
+  resources :rooms
+
 end
