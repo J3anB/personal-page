@@ -1,2 +1,13 @@
-<%= render partial: 'shared/cv_card', collection: @cv_cards %>
-<%= render partial: 'shared/cv_competence', collection: @cv_competences %>
+<div class="mother-card">
+  <div class="comp-card">
+    <%= render partial: 'shared/cv_competence', collection: @cv_competences %>
+  </div>
+
+  <div class="vr-line">
+
+  </div>
+
+  <div class="cv-card">
+    <%= render partial: 'shared/cv_card', collection: @cv_cards %>
+  </div>
+</div>

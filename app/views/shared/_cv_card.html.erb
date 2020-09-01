@@ -1,31 +1,31 @@
-<ul class="list-group list-group-flush" style="max-width: 25rem">
-  <li class="list-group-item cv-title toggle-button" title="Popover title" data-content='<a href="<%= cv_card.link %>" target="_blank"> <%= cl_image_tag(cv_card.picture, :width => 250, :crop => "fill") %> </a>'><%= cv_card.business %></li>
-  <li class="list-group-item cv-date"><%= cv_card.date %></li>
+  <ul class="list-group list-group-flush ">
+    <li class="list-group-item cv-title toggle-button" title="Popover title" data-content='<a href="<%= cv_card.link %>" target="_blank"> <%= cl_image_tag(cv_card.picture, :width => 250, :crop => "fill") %> </a>'><%= cv_card.business %></li>
+    <li class="list-group-item cv-date"><%= cv_card.date %></li>
 
-  <div class="list-group-item text-style">
-    <li><%= cv_card.job %></li>
-    <li><%= cv_card.competence %></li>
-    <% unless cv_card.competence_two.empty? %>
-      <li><%= cv_card.competence_two %></li>
-    <% end %>
-    <% unless cv_card.competence_three.empty? %>
-      <li><%= cv_card.competence_three %></li>
-    <% end %>
-    <% unless cv_card.competence_four.empty? %>
-      <li><%= cv_card.competence_four %></li>
-    <% end %>
-    <% unless cv_card.competence_five.empty? %>
-      <li><%= cv_card.competence_five %></li>
-    <% end %>
-  </div>
+    <div class="list-group-item text-style">
+      <li><%= cv_card.job %></li>
+      <li><%= cv_card.competence %></li>
+      <% unless cv_card.competence_two.empty? %>
+        <li><%= cv_card.competence_two %></li>
+      <% end %>
+      <% unless cv_card.competence_three.empty? %>
+        <li><%= cv_card.competence_three %></li>
+      <% end %>
+      <% unless cv_card.competence_four.empty? %>
+        <li><%= cv_card.competence_four %></li>
+      <% end %>
+      <% unless cv_card.competence_five.empty? %>
+        <li><%= cv_card.competence_five %></li>
+      <% end %>
+    </div>
 
-  <div>
-    <% if !current_user.nil? && current_user.admin %>
-      <a href="<%= cv_card_path(cv_card) %>"><i class="far fa-eye"></i></a>
-      <a href="<%= edit_cv_card_path(cv_card) %>"><i class="fas fa-edit"></i></a>
-      <a type="button" data-toggle="modal" data-target="#deleteModal<%= cv_card.id %>"> <i class="far fa-trash-alt"></i></a>
-    <% end %>
-  </div>
-</ul>
-
+    <div>
+      <% if !current_user.nil? && current_user.admin %>
+        <a href="<%= cv_card_path(cv_card) %>"><i class="far fa-eye"></i></a>
+        <a href="<%= edit_cv_card_path(cv_card) %>"><i class="fas fa-edit"></i></a>
+        <a type="button" data-toggle="modal" data-target="#deleteModal<%= cv_card.id %>">
+          <i class="far fa-trash-alt"></i></a>
+      <% end %>
+    </div>
+  </ul>
 <%= render partial: "shared/delete_modal", locals: {link_to_delete: url_for(cv_card_destroy_path(cv_card)), object_to_delete: cv_card} %>

@@ -36,8 +36,9 @@
       <%= form.text_area :message, autofocus: true, autocomplete: "subject", class: "form-control", required: true %>
     </div>
 
-    <%= link_to 'Back', contacts_path, class: "btn btn-outline-primary" %>
-    <%= link_to 'My contacts', {controller: 'contacts'}, class: "btn btn-outline-primary" %>
-    <%= form.submit "Submit", class: "btn btn-primary" %>
+    <div>
+      <%= form.submit "Submit", class: "btn btn-primary" %>
+      <%= render "shared/shared_buttons" %>
+    </div>
   </div>
 <% end %>

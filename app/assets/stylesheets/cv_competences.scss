@@ -16,7 +16,7 @@ li {
 }
 .list-group-flush > .list-group-item.cv-date{
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-family: serif;
   font-weight: lighter;
   //border-top: 1px solid #ade8f4;
@@ -26,3 +26,9 @@ li {
 .text-style {
   margin-bottom: 10px;
 }
+
+//.comp-card{
+//  display: flex;
+//  justify-content: flex-start;
+//  align-self:flex-start;
+//}
