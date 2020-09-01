@@ -1,4 +1,3 @@
-
 import Chart from 'chart.js';
 // var myChart = new Chart(ctx, {...});
 
@@ -64,14 +63,21 @@ function initChart() {
                             unit: 'day'
                         }
                     }],
-                    yAxes: [{
-                        ticks: {
-                            stepSize: 0.20,
-                        }
-                    },
+                    yAxes: [
+                        {
+                            ticks: {
+                                suggestedMin: -5,
+                                suggestedMax: 4,
+                                stepSize: 1,
+                            }
+                        },
                         {
                             id: 'humidityAxes',
                             position: 'right',
+                            ticks:{
+                                suggestedMin: 0,
+                                suggestedMax: 100,
+                            }
                         }]
                 }
             }

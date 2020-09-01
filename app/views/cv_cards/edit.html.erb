@@ -1,4 +1,4 @@
-<h1><i class="far fa-newspaper"> </i>  <%= @cv_card.business%> Curriculum vitæ edit</h1>
+<h1><i class="far fa-newspaper"> </i>  <%= @cv_card.business %> Curriculum vitæ edit</h1>
 
 <%= form_with(model: @cv_card, local: true) do |form| %>
 
@@ -19,36 +19,18 @@
       <%= form.text_field :date, autofocus: true, autocomplete: "date", class: "form-control", required: true %>
     </div>
 
-    <div class="form-group">
-      <%= form.label :competence %><br>
-      <%= form.text_field :competence, autofocus: true, autocomplete: "competence", class: "form-control", required: true %>
-    </div>
+    <% for competence_number in ['one', 'two', 'three', 'four', 'five'] %>
+      <div class="form-group">
+        <%= form.label "competence_#{competence_number}".to_sym %><br>
+        <%= form.text_field "competence_#{competence_number}".to_sym, autofocus: true, autocomplete: "competence", class: "form-control", require: competence_required?(competence_number) %>
+      </div>
+    <% end %>
 
-    <div class="form-group">
-      <%= form.label :competence_two %><br>
-      <%= form.text_field :competence_two, autofocus: true, autocomplete: "competence_two", class: "form-control" %>
-    </div>
-
-    <div class="form-group">
-      <%= form.label :competence_three %><br>
-      <%= form.text_field :competence_three, autofocus: true, autocomplete: "competence_three", class: "form-control" %>
-    </div>
-
-    <div class="form-group">
-      <%= form.label :competence_four %><br>
-      <%= form.text_field :competence_four, autofocus: true, autocomplete: "competence_four", class: "form-control"%>
-    </div>
-
-    <div class="form-group">
-      <%= form.label :competence_five %><br>
-      <%= form.text_area :competence_five, autofocus: true, autocomplete: "competence_five", class: "form-control" %>
-    </div>
 
     <div class="form-group">
       <%= form.label :link %><br>
       <%= form.text_field :link, autofocus: true, autocomplete: "link", class: "form-control" %>
     </div>
-
 
 
     <div class="custom-file">
@@ -57,9 +39,8 @@
 
     </div>
 
-    <%= link_to 'Back', contacts_path, class: "btn-sm btn-outline-secondary" %>
-    <%= link_to 'My contacts', {controller: 'contacts'}, class: "btn-sm btn-outline-secondary" %>
-    <%= form.submit "Submit", class: "btn-sm btn-outline-secondary" %>
+    <%= render "shared/shared_buttons" %>
+    <%= form.submit "Submit", class: "btn btn-sm btn-outline-secondary" %>
 
   </div>
 <% end %>

@@ -1,25 +1,19 @@
-  <ul class="list-group list-group-flush ">
-    <li class="list-group-item cv-title toggle-button" title="Popover title" data-content='<a href="<%= cv_card.link %>" target="_blank"> <%= cl_image_tag(cv_card.picture, :width => 250, :crop => "fill") %> </a>'><%= cv_card.business %></li>
-    <li class="list-group-item cv-date"><%= cv_card.date %></li>
+<ul class="list-group list-group-flush ">
+  <li class="list-group-item cv-title toggle-button" title="Popover title" data-content='<a href="<%= cv_card.link %>" target="_blank"> <%= cl_image_tag(cv_card.picture, :width => 250, :crop => "fill") %> </a>'><%= cv_card.business %></li>
+  <li class="list-group-item cv-date"><%= cv_card.date %></li>
 
-    <div class="list-group-item text-style">
+  <li class="list-group-item text-style cv-info">
+    <ul>
       <li><%= cv_card.job %></li>
-      <li><%= cv_card.competence %></li>
-      <% unless cv_card.competence_two.empty? %>
-        <li><%= cv_card.competence_two %></li>
+      <% for info_number in ['one', 'two', 'three', 'four', 'five'] %>
+        <% unless cv_card.send("competence_#{info_number}".to_sym).empty? %>
+          <li><%= cv_card.send("competence_#{info_number}".to_sym) %></li>
+        <% end %>
       <% end %>
-      <% unless cv_card.competence_three.empty? %>
-        <li><%= cv_card.competence_three %></li>
-      <% end %>
-      <% unless cv_card.competence_four.empty? %>
-        <li><%= cv_card.competence_four %></li>
-      <% end %>
-      <% unless cv_card.competence_five.empty? %>
-        <li><%= cv_card.competence_five %></li>
-      <% end %>
-    </div>
-
-    <div>
+    </ul>
+  </li>
+  <li class="list-group-item text-style cv-title">
+    <div class="text-style">
       <% if !current_user.nil? && current_user.admin %>
         <a href="<%= cv_card_path(cv_card) %>"><i class="far fa-eye"></i></a>
         <a href="<%= edit_cv_card_path(cv_card) %>"><i class="fas fa-edit"></i></a>
@@ -27,5 +21,6 @@
           <i class="far fa-trash-alt"></i></a>
       <% end %>
     </div>
-  </ul>
+  </li>
+</ul>
 <%= render partial: "shared/delete_modal", locals: {link_to_delete: url_for(cv_card_destroy_path(cv_card)), object_to_delete: cv_card} %>

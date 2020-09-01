@@ -7,39 +7,20 @@
       <%= form.text_field :title, autofocus: true, autocomplete: "title", class: "form-control", required: true %>
     </div>
 
-    <div class="form-group">
-      <%= form.label :info %><br>
-      <%= form.text_field :info, autofocus: true, autocomplete: "new info", class: "form-control" %>
-    </div>
-
-    <div class="form-group">
-      <%= form.label :info_two %><br>
-      <%= form.text_field :info_two, autofocus: true, autocomplete: "new info", class: "form-control" %>
-    </div>
-
-    <div class="form-group">
-      <%= form.label :info_three %><br>
-      <%= form.text_field :info_three, autofocus: true, autocomplete: "new info", class: "form-control" %>
-    </div>
-
-    <div class="form-group">
-      <%= form.label :info_four %><br>
-      <%= form.text_field :info_four, autofocus: true, autocomplete: "new info", class: "form-control" %>
-    </div>
-
-    <div class="form-group">
-      <%= form.label :info_five %><br>
-      <%= form.text_area :info_five, autofocus: true, autocomplete: "new info", class: "form-control" %>
-    </div>
-
-
-      <div>
-        <%= form.submit "Submit", class: "btn btn-sm btn-outline-secondary" %>
-
-        <div class="shared-buttons">
-          <%= render "shared/shared_buttons" %>
-        </div>
+    <% for info_number in ['one', 'two', 'three', 'four', 'five'] %>
+      <div class="form-group">
+        <%= form.label "info_#{info_number}".to_sym %><br>
+        <%= form.text_field "info_#{info_number}".to_sym, autofocus: true, autocomplete: "info", class: "form-control", require: info_required?(info_number) %>
       </div>
+    <% end %>
+
+    <div>
+      <%= form.submit "Submit", class: "btn btn-sm btn-outline-secondary" %>
+
+      <div class="shared-buttons">
+        <%= render "shared/shared_buttons" %>
       </div>
+    </div>
+  </div>
 
 <% end %>

@@ -46,10 +46,16 @@ class CvCardsController < ApplicationController
     redirect_to cv_cards_path
   end
 
+  def competence_required?(competence_number)
+    competence_number == "one"
+  end
+
+  helper_method :competence_required?
+
   private
 
   def cv_card_params
-    params.require(:cv_card).permit(:business, :job, :date, :competence, :competence_two, :competence_three, :competence_four, :competence_five, :link)
+    params.require(:cv_card).permit(:business, :job, :date, :competence_one, :competence_two, :competence_three, :competence_four, :competence_five, :link)
   end
 
   def cv_card_file

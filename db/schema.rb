@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_26_153004) do
+ActiveRecord::Schema.define(version: 2020_09_01_105941) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 2020_08_26_153004) do
     t.string "business"
     t.string "job"
     t.string "date"
-    t.string "competence"
+    t.string "competence_one"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "picture"
@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 2020_08_26_153004) do
 
   create_table "cv_competences", force: :cascade do |t|
     t.string "title"
-    t.string "info"
+    t.string "info_one"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "info_two"
