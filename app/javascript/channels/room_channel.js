@@ -1,26 +1,25 @@
 import consumer from "./consumer";
 
-$(function() {
-    $('[data-channel-subscribe="room"]').each(function(index, element) {
+$(function () {
+    $('[data-channel-subscribe="room"]').each(function (index, element) {
         var $element = $(element),
             room_id = $element.data('room-id'),
-        messageTemplate = $('[data-role="message-template"]');
+            messageTemplate = $('[data-role="message-template"]');
         //
-        $element.animate({ scrollTop: $element.prop("scrollHeight")}, 1000)
-
+        $element.animate({scrollTop: $element.prop("scrollHeight")}, 1000)
         consumer.subscriptions.create(
             {
                 channel: "RoomChannel",
                 room: room_id
             },
             {
-                received: function(data) {
+                received: function (data) {
                     var content = messageTemplate.children().clone(true, true);
                     content.find('[data-role="user-username"]').text(data.user);
-                    content.find('[data-role="message-text"]').text(data.message.message);
-                    content.find('[data-role="message-date"]').text(data.message.updated_at);
+                    content.find('[data-role="message-text"]').text(data.message);
+                    content.find('[data-role="message-date"]').text(data.message_date);
                     $element.append(content);
-                    $element.animate({ scrollTop: $element.prop("scrollHeight")}, 1000);
+                    $element.animate({scrollTop: $element.prop("scrollHeight")}, 1000);
                 }
             }
         );

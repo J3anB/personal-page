@@ -1,13 +1,13 @@
 <div class="chat-message-container">
-      <div class="username" data-role="user-username"> <%= chatroom_template.user.username unless chatroom_template.nil? %></div>
+      <div class="username" data-role="user-username"> <%= chatroom_template[:user] unless chatroom_template.nil? %></div>
   <div class="row no-gutters">
     <div class="col-auto text-center">
     </div>
     <div class="col">
       <div class="message-content">
-        <p class="mb-1" data-role="message-text"> <%= chatroom_template.message unless chatroom_template.nil?%></p>
+        <p class="mb-1" data-role="message-text"> <%= chatroom_template[:message] unless chatroom_template.nil?%></p>
         <div class="text-right">
-          <small data-role="message-date"><%= chatroom_template.created_at unless chatroom_template.nil? %></small>
+          <small data-role="message-date"><%= chatroom_template[:message_date] unless chatroom_template.nil? %></small>
         </div>
       </div>
     </div>
