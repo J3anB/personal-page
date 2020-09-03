@@ -6,20 +6,32 @@ $(function () {
             room_id = $element.data('room-id'),
             messageTemplate = $('[data-role="message-template"]');
         //
-        $element.animate({scrollTop: $element.prop("scrollHeight")}, 1000)
-        consumer.subscriptions.create(
+        $element.animate({scrollTop: $element.prop("scrollHeight")}, 1000);
+        var roomChannel = consumer.subscriptions.create(
             {
                 channel: "RoomChannel",
                 room: room_id
             },
             {
                 received: function (data) {
-                    var content = messageTemplate.children().clone(true, true);
-                    content.find('[data-role="user-username"]').text(data.user);
-                    content.find('[data-role="message-text"]').text(data.message);
-                    content.find('[data-role="message-date"]').text(data.message_date);
-                    $element.append(content);
-                    $element.animate({scrollTop: $element.prop("scrollHeight")}, 1000);
+                    if (data.new_user !== undefined) {
+                        console.log('welcome ' + data.new_user.username)
+                    } else {
+                        var content = messageTemplate.children().clone(true, true);
+                        content.find('[data-role="user-username"]').text(data.user);
+                        content.find('[data-role="message-text"]').text(data.message);
+                        content.find('[data-role="message-date"]').text(data.message_date);
+                        $element.append(content);
+                        $element.animate({scrollTop: $element.prop("scrollHeight")}, 1000);
+                    }
+                },
+                connected: function () {
+                    $('#new_room_message').on('submit', function () {
+                        var myForm = $('#new_room_message');
+                        var messageToSend = myForm.find('#message').val();
+                        roomChannel.send({body: messageToSend});
+                        myForm.find('#message').val('');
+                    });
                 }
             }
         );

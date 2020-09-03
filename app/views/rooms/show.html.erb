@@ -5,15 +5,16 @@
 <div class="row">
   <div class="col-12 col-md-3">
     <%= render partial: 'shared/rooms' %>
+    <%= render partial: 'shared/connected_users' %>
   </div>
 
   <div class="col">
     <div class="chat" data-channel-subscribe="room" data-room-id="<%= @room.id %>">
       <%= render partial: 'shared/chatroom_template', collection: @current_room_messages %>
     </div>
-    <%= form_with(model: @room_message, remote: true, id: "new_room_message") do |form| %>
+    <%= form_with(id: "new_room_message") do |form| %>
       <div class="input-group mb-3">
-        <%= form.text_area :message, autofocus: true, autocomplete: "message", class: "form-control chat-input", required: true %>
+        <%= form.text_field :message, autofocus: true, autocomplete: "message", class: "form-control chat-input", required: true %>
         <div class="input-group-append">
           <%= form.submit "Send", class: 'btn btn-dark chat-input' %>
         </div>
@@ -33,7 +34,7 @@
 
 
 
-
+<!--(model: @room_message, remote: true,)-->
 <!--pour que le Js affiche un nouveau message, il a  besoin d'un template => afin de ne pas avoir deux fois le template
  nous aovns "RENDER" une nouvelle fois le template mais en donannt une donéne vide, cela permets de -->
 
