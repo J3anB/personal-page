@@ -36,16 +36,21 @@ class CvCompetencesController < ApplicationController
     end
   end
 
-
   def destroy
     CvCompetence.find(params[:id]).destroy
     redirect_to cv_competences_path
   end
+
+  def info_required?(info_number)
+    info_number == "one"
+  end
+
+  helper_method :info_required?
 
 end
 
 private
 
 def cv_competence_params
-  params.require(:cv_competences).permit(:title, :info, :info_two, :info_three, :info_four, :info_five)
+  params.require(:cv_competences).permit(:title, :info_one, :info_two, :info_three, :info_four, :info_five)
 end

@@ -2,7 +2,6 @@
 
 <%= form_with(scope: :cv_card, url: cv_card_create_path, local: true) do |form| %>
 
-
   <div class="cv-modal">
     <div class="form-group">
       <%= form.label :business %><br>
@@ -19,30 +18,12 @@
       <%= form.text_field :date, autofocus: true, autocomplete: "date", class: "form-control", required: true %>
     </div>
 
-    <div class="form-group">
-      <%= form.label :competence %><br>
-      <%= form.text_field :competence, autofocus: true, autocomplete: "competence", class: "form-control", required: true %>
-    </div>
-
-    <div class="form-group">
-      <%= form.label :competence_two %><br>
-      <%= form.text_field :competence_two, autofocus: true, autocomplete: "competence", class: "form-control" %>
-    </div>
-
-    <div class="form-group">
-      <%= form.label :competence_three %><br>
-      <%= form.text_field :competence_three, autofocus: true, autocomplete: "competence", class: "form-control" %>
-    </div>
-
-    <div class="form-group">
-      <%= form.label :competence_four %><br>
-      <%= form.text_field :competence_four, autofocus: true, autocomplete: "competence", class: "form-control" %>
-    </div>
-
-    <div class="form-group">
-      <%= form.label :competence_five %><br>
-      <%= form.text_area :competence_five, autofocus: true, autocomplete: "competence", class: "form-control" %>
-    </div>
+    <% for competence_number in ['one', 'two', 'three', 'four', 'five'] %>
+      <div class="form-group">
+        <%= form.label "competence_#{competence_number}".to_sym %><br>
+        <%= form.text_field "competence_#{competence_number}".to_sym, autofocus: true, autocomplete: "competence", class: "form-control",  require: competence_required?(competence_number) %>
+      </div>
+    <% end %>
 
     <div class="form-group">
       <%= form.label :link %><br>
@@ -53,7 +34,6 @@
       <%= form.file_field :file, class: "custom-file-input", id: "customFileLang" %>
       <%= form.label 'picture', class: "custom-file-label", for: "customFileLang" %>
     </div>
-
 
     <div>
       <div class="shared-buttons">

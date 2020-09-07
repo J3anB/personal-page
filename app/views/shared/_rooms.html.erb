@@ -1,0 +1,22 @@
+<div class="mb-3">
+  <%= link_to new_room_path, class: 'btn btn-outline-secondary' do %>
+    Create a new room
+  <% end %>
+</div>
+
+<% if @rooms.present? %>
+  <nav class="nav flex-column">
+    <% @rooms.each do |room| %>
+      <div class="room-name">
+      <%= link_to room.name, room_path(room), class: 'btn btn-light' %>
+      <div type="button" data-toggle="modal" data-target="#deleteModal<%= room.id %>" class=" btn btn-light btn-sm"> <i class="far fa-trash-alt"></i></div>
+      </div>
+      <%= render partial: "shared/delete_modal", locals: {link_to_delete: url_for(rooms_destroy_path(room)), object_to_delete: room} %>
+    <% end %>
+  </nav>
+<% else %>
+  <div class="text-muted">
+    The are no rooms
+  </div>
+<% end %>
+

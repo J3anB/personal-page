@@ -2,6 +2,7 @@
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="form-group">
+
       <%= f.label :email %><br/>
       <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Enter email" %>
       <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>

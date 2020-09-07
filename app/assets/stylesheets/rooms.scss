@@ -1,0 +1,20 @@
+// Place all the styles related to the Rooms controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.chat {
+  border: 1px solid #ade8f4;
+  background: rgba(255, 214, 224, 0.18);
+  height: 50vh;
+  border-radius: 5px 5px 0 0;
+  overflow-y: auto;
+}
+
+.chat-input {
+  border-top: 0 none;
+  border-radius: 0 0 5px 5px;
+}
+
+.room-name{
+  padding: 5px;
+}

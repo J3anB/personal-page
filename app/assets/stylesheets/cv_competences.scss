@@ -5,6 +5,10 @@ li {
   list-style-type: circle;
 }
 
+#page-container .list-group-item.cv-info{
+  border: 0;
+}
+
 .list-group-flush > .list-group-item.cv-title {
   text-align: center;
   font-size: 1.2rem;

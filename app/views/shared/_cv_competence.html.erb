@@ -2,23 +2,12 @@
   <li class="list-group-item cv-title"><%= cv_competence.title %></li>
 
   <div class="list-group-item text-style">
-    <% unless cv_competence.info.empty? %>
-      <li><%= cv_competence.info %></li>
-    <% end %>
-    <% unless cv_competence.info_two.empty? %>
-      <li><%= cv_competence.info_two %></li>
-    <% end %>
-    <% unless cv_competence.info_three.empty? %>
-      <li><%= cv_competence.info_three %></li>
-    <% end %>
-    <% unless cv_competence.info_four.empty? %>
-      <li><%= cv_competence.info_four %></li>
-    <% end %>
-    <% unless cv_competence.info_five.empty? %>
-      <li><%= cv_competence.info_five %></li>
+    <% for info_number in ['one', 'two', 'three', 'four', 'five'] %>
+      <% unless cv_competence.send("info_#{info_number}".to_sym).empty? %>
+        <li><%= cv_competence.send("info_#{info_number}".to_sym) %></li>
+      <% end %>
     <% end %>
   </div>
-
   <div>
     <% if !current_user.nil? && current_user.admin %>
       <a href="<%= cv_competence_path(cv_competence) %>"><i class="far fa-eye"></i></a>
@@ -33,3 +22,11 @@
 <%= render partial: "shared/delete_modal", locals: {link_to_delete: url_for(cv_competence_destroy_path(cv_competence)), object_to_delete: cv_competence} %>
 
 <!--render the partial / created locals => avec la variable 'link_to_delete' dans lequel on transmet le lien avec le path lié à la suppression ainsi l'ID  de l'élément à suprimer "-->
+
+
+<%# for info_number in ['one', 'two', 'three', 'four', 'five'] %>
+<!--  <div class="form-group">-->
+<!--    <%#= form.label "info_#{info_number}".to_sym %><br>-->
+<%#= form.text_field "info_#{info_number}".to_sym, autofocus: true, autocomplete: "new info", class: "form-control", require: info_required?(info_number) %>
+<!--  </div>-->
+<%# end %>
