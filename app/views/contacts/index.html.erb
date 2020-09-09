@@ -1,43 +1,43 @@
 <h2><i class="fas fa-id-card"> My contacts</i></h2>
-
-<table class="table table-hover">
-  <thead>
-  <tr>
-    <th scope="col">#</th>
-    <th scope="col">Name</th>
-    <th scope="col">Email</th>
-    <th scope="col">Subject</th>
-    <th scope="col">Message</th>
-    <th scope="col">Response</th>
-    <th scope="col"></th>
-  </tr>
-  </thead>
-  <tbody>
-  <% @contacts.each do |contact| %>
+<div class="contact-responsive-table">
+  <table class="table table-hover">
+    <thead>
     <tr>
-      <th scope="row"><%= contact.id %></th>
-      <td><%= contact.name %></td>
-      <td><%= contact.email %></td>
-      <td><%= contact.subject %></td>
-      <td><%= contact.message %></td>
-      <td>
-        <% if contact.admin_reply %>
-          <%= contact.admin_reply.text %>
-        <% end %></td>
-      <td><a href="<%= contact_path(contact) %>"><i class="far fa-eye"></i></a>
-        <% if current_user.admin %>
-          <a href="<%= edit_contact_path(contact) %>"><i class="fas fa-edit"></i></a>
-          <a type="button" data-toggle="modal" data-target="#deleteModal<%=contact.id %>">
-            <i class="far fa-trash-alt"></i></a>
-        <% end %>
-      </td>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Subject</th>
+      <th scope="col">Message</th>
+      <th scope="col">Response</th>
+      <th scope="col"></th>
     </tr>
-    <%= render partial: "shared/delete_modal",  locals: {link_to_delete: url_for(contact_destroy_path(contact)), object_to_delete: contact} %>
-  <% end %>
+    </thead>
+    <tbody>
+    <% @contacts.each do |contact| %>
+      <tr>
+        <th scope="row"><%= contact.id %></th>
+        <td><%= contact.name %></td>
+        <td><%= contact.email %></td>
+        <td><%= contact.subject %></td>
+        <td><%= contact.message %></td>
+        <td>
+          <% if contact.admin_reply %>
+            <%= contact.admin_reply.text %>
+          <% end %></td>
+        <td><a href="<%= contact_path(contact) %>"><i class="far fa-eye"></i></a>
+          <% if current_user.admin %>
+            <a href="<%= edit_contact_path(contact) %>"><i class="fas fa-edit"></i></a>
+            <a type="button" data-toggle="modal" data-target="#deleteModal<%= contact.id %>">
+              <i class="far fa-trash-alt"></i></a>
+          <% end %>
+        </td>
+      </tr>
+      <%= render partial: "shared/delete_modal", locals: {link_to_delete: url_for(contact_destroy_path(contact)), object_to_delete: contact} %>
+    <% end %>
 
-  </tbody>
-</table>
+    </tbody>
+  </table>
+</div>
 <h1>add a new contact!</h1>
 <%= link_to 'New contact', new_contact_path, class: "btn btn-outline-secondary" %>
-<%= link_to 'home', {controller: 'home'}, class: "btn btn-outline-seconday" %>
 

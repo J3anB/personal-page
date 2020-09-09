@@ -1,6 +1,8 @@
 // Place all the styles related to the cv_competences controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+$border-color: #ade8f4;
 li {
   list-style-type: circle;
 }
@@ -14,25 +16,42 @@ li {
   font-size: 1.2rem;
   font-family: serif;
   font-weight: bold;
-  border-top: 1.5px solid #ade8f4;
-  border-bottom: 1px solid #ade8f4;
+  border-top: 1.5px solid $border-color;
+  border-bottom: 1px solid $border-color;
   margin-top: 20px;
 }
+
+.list-group-item.text-style{
+flex: 1;
+}
+
 .list-group-flush > .list-group-item.cv-date{
   text-align: center;
   font-size: 1rem;
   font-family: serif;
   font-weight: lighter;
-  //border-top: 1px solid #ade8f4;
-  border-bottom: 1px solid #ade8f4;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
   //margin-top: 10px;
 }
 .text-style {
   margin-bottom: 10px;
 }
 
-//.comp-card{
-//  display: flex;
-//  justify-content: flex-start;
-//  align-self:flex-start;
-//}
+.mother-card .list-group{
+  padding: 20px;
+}
+
+.accordion > .card > .card-header{
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.accordion{
+  padding: 20px;
+}
+
+.accordion .card {
+  border-color: $border-color;
+}

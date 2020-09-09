@@ -1,13 +1,11 @@
 <div class="mother-card">
-  <div class="comp-card">
+  <div class="row">
     <%= render partial: 'shared/cv_competence', collection: @cv_competences %>
   </div>
 
-  <div class="vr-line">
+  <hr class="hr-line">
+<div>
+ <%=render 'shared/accordion_cv_cards' %>
+</div>
 
-  </div>
-
-  <div class="cv-card">
-    <%= render partial: 'shared/cv_card', collection: @cv_cards %>
-  </div>
 </div>

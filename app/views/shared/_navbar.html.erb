@@ -3,16 +3,12 @@
     <div class="bg-dark p-1">
       <h4 class="text-white">
         <div class="navbar">
-          <div>
+          <div class="navbar-buttons">
             <% if user_signed_in? %>
-              <%= link_to 'home', home_path, class: "btn btn-outline-light" %>
-              <%= link_to 'my contacts', contacts_path, class: "btn btn-outline-light" %>
-              <%= link_to 'my cv', cv_cards_path, class: "btn btn-outline-light" %>
-              <%= link_to 'my competences', cv_competences_path, class: "btn btn-outline-light" %>
-              <%= link_to 'My chat', {controller: 'rooms'}, class: "btn btn-outline-light" %>
-          <% end %>
+              <%= render 'shared/navbar_buttons' %>
+            <% end %>
           </div>
-          <div>
+          <div class="navbar-weather">
             <i class="fas fa-cloud-sun"></i>
             <div class="badge badge-dark" id="weather_city"><%= weather.city %></div>
             <div class="badge badge-dark" id="weather_temperature"><%= weather.temperature %>°c</div>
