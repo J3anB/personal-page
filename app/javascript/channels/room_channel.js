@@ -39,7 +39,6 @@ $(function () {
 });
 
 function display_connected_users(data) {
-    console.log(data.all_users.length);
     $('#connected-users-placeholder').text(data.all_users.length);
     var connected_user_list = $('#connected-users-list');
     connected_user_list.html('');
