@@ -1,3 +1,3 @@
-redis = Redis.new(ENV.fetch("REDISTOGO_URL"))
+redis = Redis.new(:url => ENV.fetch("REDISTOGO_URL"))
   redis.del("rooms")
 
