@@ -3,7 +3,7 @@ class RoomChannel < ApplicationCable::Channel
   def subscribed
     @room = Room.find params[:room]
 
-    redis = Redis.new(host: "localhost")
+    redis = Redis.new
     room_users = redis.hmget("rooms", @room.id)
     if room_users.first.nil?
       current_room_users = []
@@ -31,7 +31,7 @@ class RoomChannel < ApplicationCable::Channel
   end
 
   def unsubscribed
-    redis = Redis.new(host: "localhost")
+    redis = Redis.new
     room_users = redis.hmget("rooms", @room.id)
     current_room_users = JSON.parse(room_users.first)
 
