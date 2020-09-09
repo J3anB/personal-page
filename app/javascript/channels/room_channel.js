@@ -14,8 +14,8 @@ $(function () {
             },
             {
                 received: function (data) {
-                    if (data.new_user !== undefined) {
-                        console.log('welcome ' + data.new_user.username)
+                    if (data.all_users !== undefined) {
+                        display_connected_users(data)
                     } else {
                         var content = messageTemplate.children().clone(true, true);
                         content.find('[data-role="user-username"]').text(data.user);
@@ -38,11 +38,24 @@ $(function () {
     });
 });
 
+function display_connected_users(data) {
+    console.log(data.all_users.length);
+    $('#connected-users-placeholder').text(data.all_users.length);
+    var connected_user_list = $('#connected-users-list');
+    connected_user_list.html('');
+    data.all_users.forEach(element => {
+        var connected_users_template = $('[data-role="connected-user-template"]');
+        var content = connected_users_template.children().clone(true, true);
+        content.text(element);
+        connected_user_list.append(content)
+    });
+}
+
 
 //dans la fonction:
 // on vient selectionner grace à un selecteur le chat:"data-channel-subscribe"
 // que l'on retrouve dans appelé dans le "show"
-//gradce à Jquery, on lit le room ID sur lequel on est actuellement => "room_id"
+//grace à Jquery, on lis le room ID sur lequel on est actuellement => "room_id"
 //on prends le template qffichés dans le message grace à "message-template" dans le show
 // grace à "consumuer" on ouvre un websocket avec rails, => navigateur qui ouvre une connexion directe avec Rails => le websocket (similaire à ajax,
 // mais contrairement à ajax qui effectue une seule requete et une seule reponse, le websocket c'est une connexion qui reste ouverte
@@ -50,3 +63,6 @@ $(function () {
 
 
 //la fonction received détermine l'action Js suite à l'info reçue par le serveur
+
+
+// déclarer une fonction =>
