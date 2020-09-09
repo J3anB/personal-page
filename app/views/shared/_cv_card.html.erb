@@ -1,5 +1,5 @@
-<ul class="list-group list-group-flush ">
-  <li class="list-group-item cv-title toggle-button" title="Popover title" data-content='<a href="<%= cv_card.link %>" target="_blank"> <%= cl_image_tag(cv_card.picture, :width => 250, :crop => "fill") %> </a>'><%= cv_card.business %></li>
+<ul class="list-group list-group-flush col-md-6 col-sm-12">
+  <li class="list-group-item cv-title toggle-button" title="<%= cv_card.business %>" data-content='<a href="<%= cv_card.link %>" target="_blank"> <%= cl_image_tag(cv_card.picture, :width => 250, :crop => "fill") %> </a>'><%= cv_card.business %></li>
   <li class="list-group-item cv-date"><%= cv_card.date %></li>
 
   <li class="list-group-item text-style cv-info">
@@ -12,7 +12,7 @@
       <% end %>
     </ul>
   </li>
-  <li class="list-group-item text-style cv-title">
+  <li class="list-group-item cv-title">
     <div class="text-style">
       <% if !current_user.nil? && current_user.admin %>
         <a href="<%= cv_card_path(cv_card) %>"><i class="far fa-eye"></i></a>

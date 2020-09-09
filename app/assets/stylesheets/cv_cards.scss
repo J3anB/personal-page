@@ -1,52 +1,30 @@
 // Place all the styles related to the cv_cards controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+$border-color: #ade8f4;
+
 .cv-modal {
   margin-bottom: 20px;
 }
 
-.mother-card {
-  display: grid;
-  grid-template-columns: 2fr 0.8px 2fr;
-  grid-gap: 1em;
+
+.hr-line {
+  border-color: #ade8f4;
 }
 
-.cv-card, .comp-card {
-  display: flex;
-  flex-direction: column;
-}
-
-.cv-card > ul.list-group {
-  align-self: flex-start;
-  width: 100%;
-}
-
-.comp-card > ul.list-group {
-  align-self: flex-end;
-  width: 100%;
-}
-
-@media (min-width: 1200px) {
-  .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: 80%;
-  }
-}
-
-@media (max-width: 600px) {
-  .mother-card {
-    grid-template-columns: 100%;
-  }
-  .cv-card{
-    order: 1;
-  }
-  .comp-card{
-    order: 2;
-  }
-}
-.vr-line {
-  background-color: #ade8f4;
-}
-
-.shared-buttons{
+.shared-buttons {
   padding-top: 10px;
+}
+
+ul.list-group.list-group-flush.col-md-6.col-sm-12:nth-child(4n - 1) {
+  border-left: 0.8px solid $border-color;
+}
+
+.list-group-item.cv-button{
+  text-align: center;
+}
+
+.contact-responsive-table{
+  overflow-x: auto;
+
 }

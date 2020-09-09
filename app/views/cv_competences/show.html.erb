@@ -2,9 +2,6 @@
 
 
 <%= render partial: 'shared/cv_competence', locals: {cv_competence: @cv_competence} %>
-<%= link_to 'back', :back, class: "btn btn-outline-dark" %>
-<%= link_to 'CV competences', {controller: 'cv_competences'}, class: "btn btn-outline-primary" %>
-<%= link_to 'home', {controller: 'home'}, class: "btn btn-outline-primary" %>
 
 
 <%= render partial: "shared/delete_modal", locals: {link_to_delete: url_for(cv_competence_destroy_path(@cv_competence)), object_to_delete: @cv_competence} %>
