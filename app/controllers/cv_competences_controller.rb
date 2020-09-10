@@ -52,5 +52,5 @@ end
 private
 
 def cv_competence_params
-  params.require(:cv_competences).permit(:title, :info_one, :info_two, :info_three, :info_four, :info_five)
+  params.require(:cv_competence).permit(:title, :content)
 end
