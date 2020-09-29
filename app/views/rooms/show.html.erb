@@ -22,6 +22,7 @@
       <%= form.hidden_field :room_id, autofocus: true, autocomplete: "room_id" %>
     <% end %>
   </div>
+  <%= render partial: 'shared/authorized_users' %>
 </div>
 
 <div class="d-none" data-role="message-template">
@@ -29,11 +30,17 @@
 </div>
 
 
+<% if flash[:success] %>
+  <%= render partial: "shared/toast", locals: {message_to_send: flash[:success], notification_type: "success"} %>
+<% end %>
 
-ocaz
 
 
-<!--(model: @room_message, remote: true,)-->
+
+
+
+
+
 <!--pour que le Js affiche un nouveau message, il a  besoin d'un template => afin de ne pas avoir deux fois le template
  nous aovns "RENDER" une nouvelle fois le template mais en donannt une donéne vide, cela permets de -->
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_10_110709) do
+ActiveRecord::Schema.define(version: 2020_09_10_153357) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -83,6 +83,13 @@ ActiveRecord::Schema.define(version: 2020_09_10_110709) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "content"
+  end
+
+  create_table "private_users_rooms", id: false, force: :cascade do |t|
+    t.bigint "room_id"
+    t.bigint "user_id"
+    t.index ["room_id"], name: "index_private_users_rooms_on_room_id"
+    t.index ["user_id"], name: "index_private_users_rooms_on_user_id"
   end
 
   create_table "room_messages", force: :cascade do |t|
