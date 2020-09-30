@@ -17,6 +17,7 @@ class ContactsController < ApplicationController
 
   def edit
     @contact = Contact.find(params[:id])
+
   end
 
   def create
@@ -25,7 +26,7 @@ class ContactsController < ApplicationController
       ContactMailer.with(contact: @contact).contact_email.deliver_now
       send_notif_slack
 
-      redirect_to @contact
+      redirect_to @contact, notice: "contact #{@contact.name} has been created"
     else
       render 'new'
     end
@@ -35,6 +36,7 @@ class ContactsController < ApplicationController
     @contact = Contact.find(params[:id])
 
     if @contact.update(contact_params)
+      flash[:success_contact] = "New contact: #{@contact.name} has been updated successfully"
       redirect_to @contact
     else
       render 'edit'
@@ -43,7 +45,7 @@ class ContactsController < ApplicationController
 
   def destroy
     Contact.find(params[:id]).destroy
-    redirect_to contacts_path
+    redirect_to contacts_path, notice: "Your contact has been deleted"
   end
 
 

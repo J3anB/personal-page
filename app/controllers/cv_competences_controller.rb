@@ -20,7 +20,7 @@ class CvCompetencesController < ApplicationController
     @cv_competence = CvCompetence.new(cv_competence_params)
     if @cv_competence.save
 
-      redirect_to @cv_competence
+      redirect_to @cv_competence, notice: "Your new #{@cv_competence.title} has been created successfully"
     else
       render 'new'
     end
@@ -30,7 +30,7 @@ class CvCompetencesController < ApplicationController
     @cv_competence = CvCompetence.find(params[:id])
 
     if @cv_competence.update(cv_competence_params)
-      redirect_to @cv_competence
+      redirect_to @cv_competence, notice: "Your new #{@cv_competence.title} has been updated successfully"
     else
       render 'edit'
     end
@@ -38,7 +38,7 @@ class CvCompetencesController < ApplicationController
 
   def destroy
     CvCompetence.find(params[:id]).destroy
-    redirect_to cv_competences_path
+    redirect_to cv_competences_path, notice: "Your CV competence has been deleted successfully"
   end
 
   def info_required?(info_number)

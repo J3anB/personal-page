@@ -24,8 +24,8 @@ class RoomsController < ApplicationController
       @room.users = [current_user] + [User.find(room_type_params[:users])]
     end
     if @room.save
-      flash[:success] = "Room #{@room.name} was created successfully"
-      redirect_to rooms_path
+
+      redirect_to rooms_path, notice: "Room #{@room.name} has been created successfully"
     else
       render :new
     end
@@ -33,8 +33,8 @@ class RoomsController < ApplicationController
 
   def update
     if @rooms.update_attributes(permited_parameters)
-      flash[:success] = "Room #{@room.name} has been updated successfully"
-      redirect_to rooms_path
+
+      redirect_to rooms_path, notice: "Room #{@room.name} has been updated successfully"
     else
       render :'contacts/new'
     end
@@ -42,7 +42,7 @@ class RoomsController < ApplicationController
 
   def destroy
     Room.find(params[:id]).destroy
-    redirect_to rooms_path
+    redirect_to rooms_path, notice: "Your Room has been deleted successfully"
   end
 
 

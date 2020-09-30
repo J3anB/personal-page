@@ -30,18 +30,6 @@
 </div>
 
 
-<% if flash[:success] %>
-  <%= render partial: "shared/toast", locals: {message_to_send: flash[:success], notification_type: "success"} %>
-<% end %>
 
 
 
-
-
-
-
-
-<!--pour que le Js affiche un nouveau message, il a  besoin d'un template => afin de ne pas avoir deux fois le template
- nous aovns "RENDER" une nouvelle fois le template mais en donannt une donéne vide, cela permets de -->
-
-<!--pour chacun des items de la collection, on render le partial -->
