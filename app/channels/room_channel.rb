@@ -24,7 +24,6 @@ class RoomChannel < ApplicationCable::Channel
         {time: Time.now.strftime("%m/%d/%Y - %I:%M%p"),
             message: "Bonjour #{current_user.username}"}
     )
-
   end
 
 

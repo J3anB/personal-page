@@ -22,10 +22,21 @@ class RoomsController < ApplicationController
     @room = Room.new permitted_parameters
     if room_type_params[:room_type] == 'private_room'
       @room.users = [current_user] + [User.find(room_type_params[:users])]
+
     end
     if @room.save
+      @room.users.each do |user|
+        if user != current_user
+      NotificationChannel.broadcast_to(
+          user,
+          {time: Time.now.strftime("%m/%d/%Y - %I:%M%p"),
+           message: "You have been invited to a private room by #{current_user.username} click #{ helpers.link_to 'here', @room} to redirect"}
+      )
+        end
+      end
 
       redirect_to rooms_path, notice: "Room #{@room.name} has been created successfully"
+
     else
       render :new
     end
