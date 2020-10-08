@@ -2,7 +2,7 @@ class AdminReplyController < ApplicationController
 
   def create
     path = AdminReplyService.save_reply(params[:id], reply_params, request.base_url)
-    redirect_to
+    redirect_to path
   end
 
 

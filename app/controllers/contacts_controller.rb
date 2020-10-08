@@ -36,8 +36,7 @@ class ContactsController < ApplicationController
     @contact = Contact.find(params[:id])
 
     if @contact.update(contact_params)
-      flash[:success_contact] = "New contact: #{@contact.name} has been updated successfully"
-      redirect_to @contact
+      redirect_to @contact, notice: "New contact: #{@contact.name} has been updated successfully"
     else
       render 'edit'
     end
