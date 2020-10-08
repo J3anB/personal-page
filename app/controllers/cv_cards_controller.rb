@@ -55,7 +55,7 @@ class CvCardsController < ApplicationController
   private
 
   def cv_card_params
-    params.require(:cv_card).permit(:business, :job, :date, :competence_one, :competence_two, :competence_three, :competence_four, :competence_five, :link)
+    params.require(:cv_card).permit(:business, :job, :date, :content, :link)
   end
 
   def cv_card_file

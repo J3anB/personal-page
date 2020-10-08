@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_10_153357) do
+ActiveRecord::Schema.define(version: 2020_10_08_131938) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -67,14 +67,9 @@ ActiveRecord::Schema.define(version: 2020_09_10_153357) do
     t.string "business"
     t.string "job"
     t.string "date"
-    t.string "competence_one"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "picture"
-    t.string "competence_two"
-    t.string "competence_three"
-    t.string "competence_four"
-    t.string "competence_five"
     t.string "link"
   end
 

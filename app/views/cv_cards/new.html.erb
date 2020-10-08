@@ -18,13 +18,6 @@
       <%= form.text_field :date, autofocus: true, autocomplete: "date", class: "form-control", required: true %>
     </div>
 
-    <% for competence_number in ['one', 'two', 'three', 'four', 'five'] %>
-      <div class="form-group">
-        <%= form.label "competence_#{competence_number}".to_sym %><br>
-        <%= form.text_field "competence_#{competence_number}".to_sym, autofocus: true, autocomplete: "competence", class: "form-control",  require: competence_required?(competence_number) %>
-      </div>
-    <% end %>
-
     <div class="form-group">
       <%= form.label :link %><br>
       <%= form.text_field :link, autofocus: true, autocomplete: "competence", class: "form-control" %>
@@ -36,9 +29,11 @@
     </div>
 
     <div>
-      <div class="shared-buttons">
-        <%= form.submit "Submit", class: "btn btn-sm btn-outline-secondary" %>
-     </div>
+      <%= render partial: 'shared/active_form', locals: {form: form} %>
+
+    </div>
+    <div class="submit">
+      <%= form.submit "Submit", class: "btn btn-sm btn-outline-secondary" %>
     </div>
   </div>
 
