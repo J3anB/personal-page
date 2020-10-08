@@ -5,9 +5,11 @@
     <%= form.label :title %><br>
     <%= form.text_field :title, autofocus: true, autocomplete: "title", class: "form-control", required: true %>
   </div>
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.rich_text_area :content, autofocus: true, autocomplete: "your content", class: "form-control", required: true %>
+
+  <%= render partial: 'shared/active_form', locals: {form: form} %>
+
+  <div class="submit">
+    <%= form.submit "Submit", class: "btn btn-sm btn-outline-secondary" %>
   </div>
-  <%= form.submit "Submit", class: "btn btn-sm btn-outline-secondary" %>
+
 <% end %>
