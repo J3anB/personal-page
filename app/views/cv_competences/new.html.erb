@@ -1,26 +1,6 @@
-<h1>adding a new competence</h1>
-<%= form_with(scope: :cv_competences, url: cv_competence_create_path, local: true) do |form| %>
+<h1>Add a new competence</h1>
+<%= form_with(scope: :cv_competence, url: cv_competence_create_path, local: true) do |form| %>
 
-  <div>
-    <div class="form-group">
-      <%= form.label :title %><br>
-      <%= form.text_field :title, autofocus: true, autocomplete: "title", class: "form-control", required: true %>
-    </div>
-
-    <% for info_number in ['one', 'two', 'three', 'four', 'five'] %>
-      <div class="form-group">
-        <%= form.label "info_#{info_number}".to_sym %><br>
-        <%= form.text_field "info_#{info_number}".to_sym, autofocus: true, autocomplete: "info", class: "form-control", require: info_required?(info_number) %>
-      </div>
-    <% end %>
-
-    <div>
-      <%= form.submit "Submit", class: "btn btn-sm btn-outline-secondary" %>
-
-      <div class="shared-buttons">
-        <%= render "shared/shared_buttons" %>
-      </div>
-    </div>
-  </div>
+ <%= render partial: 'shared/active_form' %>
 
 <% end %>

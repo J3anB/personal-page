@@ -6,5 +6,7 @@ $(function () {
             trigger: 'hover',
             delay: {"show": 0, "hide": 1000}
         }
-    )
+    );
+$('.toast').toast('show')
 });
+

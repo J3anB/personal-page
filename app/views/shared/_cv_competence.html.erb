@@ -3,11 +3,7 @@
 
   <li class="list-group-item text-style">
     <ul>
-      <% for info_number in ['one', 'two', 'three', 'four', 'five'] %>
-        <% unless cv_competence.send("info_#{info_number}".to_sym).empty? %>
-          <li><%= cv_competence.send("info_#{info_number}".to_sym) %></li>
-        <% end %>
-      <% end %>
+      <%= cv_competence.content %>
     </ul>
   </li>
   <li class="list-group-item cv-button ">

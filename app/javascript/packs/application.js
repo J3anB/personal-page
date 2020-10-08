@@ -9,9 +9,10 @@ require("@rails/activestorage").start()
 require("channels")
 require("bootstrap")
 require("jquery")
+require("trix")
+require("@rails/actiontext")
 require("custom/toggle.js")
 require("custom/weather.js")
-
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
@@ -19,3 +20,4 @@ require("custom/weather.js")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+

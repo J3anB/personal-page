@@ -24,7 +24,7 @@ class CvCardsController < ApplicationController
     end
     if @cv_card.save
 
-      redirect_to @cv_card
+      redirect_to @cv_card, notice: "Your CV card #{@cv_card.business} has been created  successfully"
     else
       render 'new'
     end
@@ -34,7 +34,7 @@ class CvCardsController < ApplicationController
     @cv_card = CvCard.find(params[:id])
 
     if @cv_card.update(cv_card_params)
-      redirect_to @cv_card
+      redirect_to @cv_card, notice: "your CV card #{@cv_card.business} has been updated successfully"
     else
       render 'edit'
     end
@@ -43,7 +43,7 @@ class CvCardsController < ApplicationController
 
   def destroy
     CvCard.find(params[:id]).destroy
-    redirect_to cv_cards_path
+    redirect_to cv_cards_path, notice: "Your CV card has been deleted  successfully"
   end
 
   def competence_required?(competence_number)

@@ -1,6 +1,4 @@
-<h1>Edit a competence</h1>
-<%= form_with(model: @cv_competence, local: true) do |form| %>
-
+<%= form_with model: @cv_competence do |form| %>
   <div class="form-group">
     <%= form.label :title %><br>
     <%= form.text_field :title, autofocus: true, autocomplete: "title", class: "form-control", required: true %>

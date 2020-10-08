@@ -26,6 +26,7 @@ $(function () {
                     }
                 },
                 connected: function () {
+
                     $('#new_room_message').on('submit', function () {
                         var myForm = $('#new_room_message');
                         var messageToSend = myForm.find('#message').val();

@@ -18,7 +18,16 @@ class RoomChannel < ApplicationCable::Channel
     stream_for @room
 
     broadcast_to(@room, {new_user: current_user, all_users: current_room_users})
+
+    NotificationChannel.broadcast_to(
+        current_user,
+        {time: Time.now.strftime("%m/%d/%Y - %I:%M%p"),
+            message: "Bonjour #{current_user.username}"}
+    )
+
   end
+
+
 
   def receive(data)
     @room_message = RoomMessage.create user: current_user,
@@ -29,6 +38,8 @@ class RoomChannel < ApplicationCable::Channel
     prepared_message = MessagePreparatorService.prepare_message(@room_message, current_user)
     RoomChannel.broadcast_to(@room, prepared_message)
   end
+
+
 
   def unsubscribed
     redis = Redis.new(:url => ENV.fetch("REDISTOGO_URL"){ "redis://localhost:6379/1" })

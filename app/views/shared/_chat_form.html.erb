@@ -3,5 +3,16 @@
   <%= form.label :name %>
   <%= form.text_field :name, autofocus: true, autocomplete: "name", class: "form-control", required: true %>
 
+  <%= form.label :private_room %>
+  <%= form.radio_button :room_type, "private_room" %>
+
+  <%= form.label :public_room %>
+  <%= form.radio_button :room_type, "public_room", :checked => true %>
+
+  <div>
+    <p>invite a friend to your new room</p>
+    <%= collection_select(:room, :users, User.all, :id, :username) %>
+  </div>
   <%= form.submit "Save", class: 'btn btn-outline-secondary' %>
+
 <% end %>
