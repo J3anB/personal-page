@@ -3,7 +3,8 @@ require 'net/http'
 class WeatherWorker
   include Sidekiq::Worker
 
-  def perform(city_id)
-    WeatherService.new(Rails.application.credentials.weather[:token]).get_weather(city_id)
+  def perform
+    WeatherService.new(Rails.application.credentials.weather[:token]).get_weather(2998324)
   end
+
 end

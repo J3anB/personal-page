@@ -36,6 +36,8 @@ class WeatherService
   end
 
   def self.get_all_weather
-    Weather.order(created_at: :asc)
+    Weather.select(:created_at, :temperature, :humidity).order(created_at: :asc).pluck(:created_at, :temperature, :humidity).map do |info|
+      [info[0].to_i, info[1], info[2]]
+    end
   end
 end
