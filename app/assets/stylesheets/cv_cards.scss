@@ -1,16 +1,16 @@
 // Place all the styles related to the cv_cards controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-$border-color: #ade8f4;
+$border-color: #EEF0F2;
 
 .cv-modal {
   margin-bottom: 20px;
 }
 
 
-.hr-line {
-  border-color: #ade8f4;
-}
+//.hr-line {
+//  border-color: #343A40;
+//}
 
 .shared-buttons {
   padding-top: 10px;
@@ -26,5 +26,4 @@ ul.list-group.list-group-flush.col-md-6.col-sm-12:nth-child(4n - 1) {
 
 .contact-responsive-table{
   overflow-x: auto;
-
 }

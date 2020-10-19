@@ -2,7 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-$border-color: #ade8f4;
+// the blue picked color => #ade8f4
+//the dark picked color => #343A40
+//the pink picked color => #DBCBD8
+//the pink picked color => #7EA0B7
+//the CHAT pink color => #FFF8FA
+
+
+
+$border-color: #7EA0B7;
 li {
   list-style-type: circle;
 }
@@ -17,7 +25,7 @@ li {
   font-family: serif;
   font-weight: bold;
   border-top: 1.5px solid $border-color;
-  border-bottom: 1px solid $border-color;
+  border-bottom: 0px solid $border-color;
   margin-top: 20px;
 }
 
@@ -28,11 +36,18 @@ flex: 1;
 .list-group-flush > .list-group-item.cv-date{
   text-align: center;
   font-size: 1rem;
-  font-family: serif;
-  font-weight: lighter;
-  border-top: 1px solid $border-color;
-  border-bottom: 1px solid $border-color;
+  font-family: Roboto;
+  color: #2e3945;
+  //border-top: 0px #7EA0B7;
+  border-bottom: 1px solid #7EA0B7;
   //margin-top: 10px;
+}
+
+.list-group-flush > .list-group-item.cv-job{
+  text-align: center;
+  border-bottom: 1px solid #7EA0B7;
+  margin-bottom: 10px;
+
 }
 .text-style {
   margin-bottom: 10px;
@@ -53,7 +68,7 @@ flex: 1;
 }
 
 .accordion .card {
-  border-color: $border-color;
+  border-color: white;
 }
 
 .submit{

@@ -1,12 +1,11 @@
 <ul class="list-group list-group-flush col-md-6 col-sm-12">
   <li class="list-group-item cv-title toggle-button" title="<%= cv_card.business %>" data-content='<a href="<%= cv_card.link %>" target="_blank"> <%= cl_image_tag(cv_card.picture, :width => 250, :crop => "fill") %> </a>'><%= cv_card.business %></li>
-  <li class="list-group-item cv-date"><%= cv_card.date %></li>
+  <li class="list-group-item cv-date"><%= cv_card.job %></li>
+  <li class="list-group-item cv-job  "><%= cv_card.date %></li>
 
-  <li class="list-group-item text-style cv-info">
-    <ul>
-      <li><%= cv_card.job %></li>
-    </ul>
-  </li>
+  <ul>
+    <%= cv_card.content %>
+  </ul>
   <li class="list-group-item cv-title">
     <div class="text-style">
       <% if !current_user.nil? && current_user.admin %>
