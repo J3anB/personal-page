@@ -3388,6 +3388,11 @@ globule@^1.0.0:
     lodash "~4.17.10"
     minimatch "~3.0.2"
 
+google-charts@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/google-charts/-/google-charts-2.0.0.tgz#29cf307f2e250c743daf5161816f14d0df2c6498"
+  integrity sha512-wxtwJTvA9MhFGCkMtUYtM+b1gQ8R6zSdQOxflRTAGr83+sd0bRDfrn1HaPIpxnqI75cImQBDp0ZTUXuwLhgPzA==
+
 graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2:
   version "4.2.4"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.4.tgz#2256bde14d3632958c465ebc96dc467ca07a29fb"

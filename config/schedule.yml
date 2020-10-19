@@ -1,0 +1,4 @@
+weather_job:
+  cron: "0 * * * *"
+  class: "WeatherWorker"
+  queue: default

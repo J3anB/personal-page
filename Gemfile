@@ -57,6 +57,8 @@ gem 'font-awesome-sass'
 #Gem Sidekiq
 gem 'sidekiq'
 
+#gem sidekiq-cron => job schedule
+gem 'sidekiq-cron'
 #------------------------------
 
 #gem install cloudinary
