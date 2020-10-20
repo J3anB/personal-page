@@ -1,21 +1,21 @@
 <ul class="list-group list-group-flush col-md-6 col-sm-12 cv-background">
   <li class="list-group-item cv-title"><%= cv_competence.title %></li>
 
-  <li class="list-group-item text-style">
+  <li class="list-group-item text-comp-style card-border">
     <ul>
       <%= cv_competence.content %>
     </ul>
   </li>
-  <li class="list-group-item cv-button ">
-    <div class="text-style">
-    <% if !current_user.nil? && current_user.admin %>
-      <a href="<%= cv_competence_path(cv_competence) %>"><i class="far fa-eye"></i></a>
-      <a href="<%= edit_cv_competence_path(cv_competence) %>"><i class="fas fa-edit"></i></a>
-      <a type="button" data-toggle="modal" data-target="#deleteModal<%= cv_competence.id %>">
-        <i class="far fa-trash-alt"></i></a>
-    <% end %>
-    </div>
+  <% if !current_user.nil? && current_user.admin %>
+    <li class="list-group-item cv-button ">
+      <div class="text-style">
+        <a href="<%= cv_competence_path(cv_competence) %>"><i class="far fa-eye"></i></a>
+        <a href="<%= edit_cv_competence_path(cv_competence) %>"><i class="fas fa-edit"></i></a>
+        <a type="button" data-toggle="modal" data-target="#deleteModal<%= cv_competence.id %>">
+          <i class="far fa-trash-alt"></i></a>
+  </div>
   </li>
+  <% end %>
 </ul>
 <%= render partial: "shared/delete_modal", locals: {link_to_delete: url_for(cv_competence_destroy_path(cv_competence)), object_to_delete: cv_competence} %>
 

@@ -80,3 +80,13 @@ flex: 1;
 .submit{
   padding-top: 10px;
 }
+
+.background-color .list-group-item.text-comp-style.card-border{
+  border-left: 1px solid rgba(126, 160, 183, 0.3);
+  border-right: 1px solid rgba(126, 160, 183, 0.3);
+  border-bottom: 1px solid rgba(126, 160, 183, 0.3);
+  height: 100%;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding-bottom: 25px;
+}
