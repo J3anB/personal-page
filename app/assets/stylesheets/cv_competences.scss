@@ -24,13 +24,18 @@ li {
   font-size: 1.2rem;
   font-family: serif;
   font-weight: bold;
-  border-top: 1.5px solid $border-color;
+  border-top: 1px solid rgba(126, 160, 183, 0.3);
   border-bottom: 0px solid $border-color;
   margin-top: 20px;
+  border-radius: 5px;
+  margin-bottom: -5px;
+  border-left: 1px solid rgba(126, 160, 183, 0.3);
+  border-right: 1px solid rgba(126, 160, 183, 0.3);
 }
 
 .list-group-item.text-style{
 flex: 1;
+  border-radius: 5px;
 }
 
 .list-group-flush > .list-group-item.cv-date{
@@ -69,6 +74,7 @@ flex: 1;
 
 .accordion .card {
   border-color: white;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .submit{
