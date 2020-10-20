@@ -27,6 +27,15 @@ Rails.application.routes.draw do
 
   delete 'cv_competence/:id', to: 'cv_competences#destroy', as: :cv_competence_destroy
 
+  #routes for Formation Cards
+
+  get 'formation/new', to: 'formations#new'
+
+  post 'formation/create', to: 'formations#create'
+
+  delete 'formation/:id', to: 'formations#destroy', as: :formation_destroy
+
+
   #routes for contact admin reply
   post 'contacts/:id', to: 'admin_reply#create'
 
@@ -53,6 +62,7 @@ Rails.application.routes.draw do
 
   resources :cv_cards
   resources :cv_competences
+  resources :formations
 
   #rooting for ChatRoom
 

@@ -1,0 +1,3 @@
+<% if current_user != nil and current_user.admin %>
+  <%= link_to 'new formation', {controller: '/formations', action: 'new'}, class: "btn btn-outline-secondary" %>
+<% end %>
