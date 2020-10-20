@@ -9,7 +9,7 @@
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "^5.2.1",
     "bootstrap": ">=4.1.2",
-    "chart.js": "^2.9.3",
+    "google-charts": "^2.0.0",
     "jquery": "^3.5.0",
     "popper.js": "^1.16.1",
     "trix": "^1.2.0",
@@ -17,7 +17,6 @@
   },
   "version": "0.1.0",
   "devDependencies": {
-    "google-charts": "^2.0.0",
     "webpack-dev-server": "^3.11.0"
   }
 }
