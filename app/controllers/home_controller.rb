@@ -4,6 +4,7 @@ class HomeController < ApplicationController
   def index
     @cv_cards = CvCard.all
     @cv_competences = CvCompetence.all
+    @formations = Formation.all
   end
 
 end

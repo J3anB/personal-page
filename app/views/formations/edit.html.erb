@@ -1,0 +1,25 @@
+<h2>Edit Formation</h2>
+
+<%= form_with(model: @formation, local: true) do |form| %>
+
+  <div class="cv-modal">
+    <div class="form-group">
+      <%= form.label :school %><br>
+      <%= form.text_field :school, autofocus: true, autocomplete: "school", class: "form-control", required: true %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :date %><br>
+      <%= form.text_field :date, autofocus: true, autocomplete: "date", class: "form-control", required: true %>
+    </div>
+
+    <div>
+      <%= render partial: 'shared/active_form', locals: {form: form} %>
+    </div>
+
+    <div class="submit">
+      <%= form.submit "Submit", class: "btn btn-sm btn-outline-secondary" %>
+    </div>
+
+  </div>
+<% end %>

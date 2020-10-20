@@ -1,0 +1,20 @@
+<ul class="list-group list-group-flush col-md-6 col-sm-12 cv-background">
+  <li class="list-group-item cv-title"><%= formation.school %></li>
+  <li class="list-group-item cv-job"><%= formation.date %></li>
+  <li class="list-group-item text-comp-style card-border">
+    <ul>
+      <%= formation.content %>
+    </ul>
+  </li>
+  <% if !current_user.nil? && current_user.admin %>
+    <li class="list-group-item cv-button ">
+      <div class="text-style">
+        <a href="<%= formation_path(formation) %>"><i class="far fa-eye"></i></a>
+        <a href="<%= edit_formation_path(formation) %>"><i class="fas fa-edit"></i></a>
+        <a type="button" data-toggle="modal" data-target="#deleteModal<%= formation.id %>">
+          <i class="far fa-trash-alt"></i></a>
+      </div>
+    </li>
+  <% end %>
+</ul>
+<%= render partial: "shared/delete_modal", locals: {link_to_delete: url_for(formation_destroy_path(formation)), object_to_delete: formation} %>
