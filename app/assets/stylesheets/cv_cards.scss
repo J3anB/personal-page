@@ -30,7 +30,43 @@ ul.list-group.list-group-flush.col-md-6.col-sm-12:nth-child(4n - 1) {
 
 .list-group-item.cv-content{
   background-color: white;
+  border-left: 1px solid rgba(126, 160, 183, 0.3);
+  border-right: 1px solid rgba(126, 160, 183, 0.3);
+  border-bottom: 1px solid rgba(126, 160, 183, 0.3);
 }
+
+.background-color .list-group-item.cv-date{
+  border-left: 1px solid rgba(126, 160, 183, 0.3);
+  border-right: 1px solid rgba(126, 160, 183, 0.3);
+}
+
+.background-color .list-group-item.cv-job{
+  border-left: 1px solid rgba(126, 160, 183, 0.3);
+  border-right: 1px solid rgba(126, 160, 183, 0.3);
+}
+
+.background-color .list-group-item.text-cv-style.card-border{
+  border-left: 1px solid rgba(126, 160, 183, 0.3);
+  border-right: 1px solid rgba(126, 160, 183, 0.3);
+  border-bottom: 1px solid rgba(126, 160, 183, 0.3);
+  height: 100%;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+
 //.cv-background{
 //background: rgba(0, 0, 0, 0.01);
 //}
+
+//.list-group-flush > .list-group-item:last-child {
+//  margin-top: -10px;
+//}
+
+.list-group-item.text-cv-style{
+  margin-top: -10px;
+}
+
+.background-color .accordion > .card > .card-header{
+  background-color: rgba(0, 0, 0, 0);
+}

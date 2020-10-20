@@ -1,19 +1,19 @@
-<ul class="list-group list-group-flush col-md-6 col-sm-12">
+<ul class="list-group list-group-flush col-md-6 col-sm-12 ">
   <li class="list-group-item cv-title toggle-button" title="<%= cv_card.business %>" data-content='<a href="<%= cv_card.link %>" target="_blank"> <%= cl_image_tag(cv_card.picture, :width => 250, :crop => "fill") %> </a>'><%= cv_card.business %></li>
   <li class="list-group-item cv-date"><%= cv_card.job %></li>
   <li class="list-group-item cv-job"><%= cv_card.date %></li>
-  <ul class="cv-content">
+  <li class="list-group-item text-cv-style card-border">
     <%= cv_card.content %>
-  </ul>
-  <li class="list-group-item cv-title">
-    <div class="text-style">
-      <% if !current_user.nil? && current_user.admin %>
+  </li>
+  <% if !current_user.nil? && current_user.admin %>
+    <li class="list-group-item cv-title">
+      <div class="text-style">
         <a href="<%= cv_card_path(cv_card) %>"><i class="far fa-eye"></i></a>
         <a href="<%= edit_cv_card_path(cv_card) %>"><i class="fas fa-edit"></i></a>
         <a type="button" data-toggle="modal" data-target="#deleteModal<%= cv_card.id %>">
           <i class="far fa-trash-alt"></i></a>
-      <% end %>
-    </div>
-  </li>
+      </div>
+    </li>
+  <% end %>
 </ul>
 <%= render partial: "shared/delete_modal", locals: {link_to_delete: url_for(cv_card_destroy_path(cv_card)), object_to_delete: cv_card} %>
