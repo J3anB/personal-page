@@ -6,7 +6,9 @@ $border-color: #EEF0F2;
 .cv-modal {
   margin-bottom: 20px;
 }
-
+.cv-show{
+  padding-bottom: 25px;
+}
 
 //.hr-line {
 //  border-color: #343A40;
@@ -22,6 +24,7 @@ ul.list-group.list-group-flush.col-md-6.col-sm-12:nth-child(4n - 1) {
 
 .list-group-item.cv-button{
   text-align: center;
+  background-color: transparent;
 }
 
 .contact-responsive-table{

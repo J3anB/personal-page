@@ -6,7 +6,7 @@
     <%= cv_card.content %>
   </li>
   <% if !current_user.nil? && current_user.admin %>
-    <li class="list-group-item cv-title">
+    <li class="list-group-item cv-button">
       <div class="text-style">
         <a href="<%= cv_card_path(cv_card) %>"><i class="far fa-eye"></i></a>
         <a href="<%= edit_cv_card_path(cv_card) %>"><i class="fas fa-edit"></i></a>
