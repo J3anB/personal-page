@@ -1,12 +1,14 @@
+
    ## [jean.bertiazar.com](http://jean.bertiazar.com)
-> **Summary 
+   
+## Summary 
 
 -  [TOOLS](#introduction)
 1. [CONTACTS COMMENTS & LOGIN](#feature1eng)
 2. [OPENWEATHER](#feature2eng)
 3. [CHATROOM](#feature3eng)
 4. [CURRICULUM VITAE](#feature4eng)
-5. [CONSULTED DOCUMENTATION](#docuengeng)
+5. [CONSULTED DOCUMENTATION](#docueng)
 
 Pour lire ce texte en Francais cliquez [ici](#french)
  #
@@ -99,7 +101,7 @@ It also allows me to share my code with you :)
 
 
 
-## 1- CONTACTS, COMMENTS & LOGIN <a name="feature1"></a>
+## 1- CONTACTS, COMMENTS & LOGIN <a name="feature1eng"></a>
 
 After having generated a first VMC, I first created a first form to add contacts to whom I let the possibility to write a comment; I then used "Devise" to create and manage users. This way, I was able to allow only registered users to leave me a comment. I added an admin column to the users table to allow the administrator to reply to comments.
 
@@ -113,14 +115,14 @@ A message is sent to my slack channel with the information about the user, his s
 
 
 
-## 2- OPENWEATHER <a name="feature2"></a>
+## 2- OPENWEATHER <a name="feature2eng"></a>
 
 After adding a navbar thanks to Bootstrap, I wanted to consume a second API; in the middle of a heat wave, I had the idea to implement a feature that displays the weather, it would allow me to collect the temperature and humidity in Lille, and follow its evolution over time thanks to a chart. I turned to OpenWeather, after having configured the token, and parsed the information collected, I used jQuery to dynamically display the information collected in real time. I first implemented chart.js which was later changed to Google Chart.
 Thanks to Sidekiq-cron, I configured a schedule-job to consume the API once per hour (Currently my project is hosted for free at Heroku and the server goes into standby mode if there are no requests, so the cron-job can't do its job as desired).
 
 
 
-## 3- CHATROOM <a name="feature3"></a>
+## 3- CHATROOM <a name="feature3eng"></a>
 
 As a new challenge, I wanted to create a dynamic chat, so I followed a tutorial to implement it with jQuery, but I wanted to push the challenge and use Websockets, so I switched to Action Cable.
 First the creation of the Rooms as well as the display of the available ones.
@@ -131,7 +133,7 @@ Wishing to continue working with Websockets, thanks to Action Cable and a Bootst
 
 
 
-## 4- CURRICULUM VITAE <a name="feature4"></a>
+## 4- CURRICULUM VITAE <a name="feature4eng"></a>
 
  
 
