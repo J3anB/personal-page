@@ -10,7 +10,7 @@
 4. [CURRICULUM VITAE](#feature4eng)
 5. [CONSULTED DOCUMENTATION](#docueng)
 
-Pour lire ce texte en Francais cliquez [ici](#french)
+Pour lire ce texte en Français cliquez [ici](#french)
  #
  
 *Before anything else, I would like to thank you for your interest in my work.
