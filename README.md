@@ -5,19 +5,19 @@ After having done the "Le Wagon" boot-camp, I wanted to start a personal project
 
 **`This project was developed using:`**
 
-           • Ruby 2.7 & Ruby on Rails 6 
-           • PostgreSQL
-           • Sidekiq
-           • Sidekiq-cron
-           • Redis
-           • JavaScript & jQuery
-           • HTML5 & CSS
-           • Bootstrap
-           • Cloudniary
-           • Devise
-           • Action Cable
-           • Action Mailer
-           • GitHub
+>           • Ruby 2.7 & Ruby on Rails 6 
+>           • PostgreSQL
+>           • Sidekiq
+>           • Sidekiq-cron
+>           • Redis
+>           • JavaScript & jQuery
+>           • HTML5 & CSS
+>           • Bootstrap
+>           • Cloudniary
+>           • Devise
+>           • Action Cable
+>           • Action Mailer
+>           • GitHub
 
 	
 
@@ -284,7 +284,7 @@ J’ai voulu pousser la simple création de mon CV, pour cela j’ai créé un M
 [https://api.slack.com/surfaces/modals/using#handling_submissions](https://api.slack.com/surfaces/modals/using#handling_submissions)
 
 	Open Weather 
-https://openweathermap.org/api[enter link description here](https://openweathermap.org/api)
+https://openweathermap.org/api(https://openweathermap.org/api)
 
 	Chat
 [https://iridakos.com/programming/2019/04/04/creating-chat-application-rails-websockets](https://iridakos.com/programming/2019/04/04/creating-chat-application-rails-websockets)
