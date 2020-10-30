@@ -16,7 +16,7 @@ Pour lire ce texte en Français cliquez [ici](#french)
 *Before anything else, I would like to thank you for your interest in my work.
 After having done the boot-camp "Le Wagon", I wanted to start a personal project in order to highlight my newly acquired skills and to realize a new challenge by implementing more complex features not covered during my training. In order to carry out my project, I wanted to give it a professional process, for this, I called upon a senior developer, Timothée L., who I thank infinitely for the time he devoted to me. He reviewed, validated, and highlighted my mistakes and the best practices to follow regarding my pull requests, before merging them with the master branch.*
 
-
+#
 
 ## **`This project was developed using:`** <a name="introduction"></a>
 
@@ -251,7 +251,7 @@ I wanted to push the simple creation of my resume, for that I created a MVC and 
 
 *Avant toute chose, je souhaite vous remercier pour l’intérêt que vous portez à mon travail.
 Après avoir effectué le boot-camp “Le Wagon”, j’ai souhaité démarrer un projet personnel afin de mettre en avant mes compétences nouvellement acquises et de réaliser un nouveau challenge en implémentant des fonctionnalités plus complexes non-abordées lors de ma formation. Afin de mener à bien mon projet, j’ai souhaité lui donner un processus professionnel, pour cela, j’ai fait appel à un développeur senior, Timothée L., qui je remercie infiniment pour le temps qu’il m’a consacré. Il révisait, validait, et mettait en avant mes erreurs et les bonnes pratiques à suivre suite à mes pull requests, avant de les fusionner avec la branche master.*
-
+#
 
 ## **`Ce projet a été développé grâce à:`** <a name="introductionfr"></a>
 
