@@ -1,5 +1,14 @@
    ## [jean.bertiazar.com](http://jean.bertiazar.com)
+> **Summary 
 
+-  [TOOLS](#introduction)
+1. [CONTACTS COMMENTS & LOGIN](#feature1)
+2. [OPENWEATHER](#feature2)
+3. [CHATROOM](#feature3)
+4. [CURRICULUM VITAE](#feature4)
+5. [CONSULTED DOCUMENTATION](#docueng)
+
+Pour lire ce texte en Francais cliquez [ici](#french)
  #
  
 *Before anything else, I would like to thank you for your interest in my work.
@@ -7,7 +16,7 @@ After having done the boot-camp "Le Wagon", I wanted to start a personal project
 
 
 
-## **`This project was developed using:`**
+## **`This project was developed using:`** <a name="introduction"></a>
 
 >           • Ruby 2.7 & Ruby on Rails 6 
 >           • PostgreSQL
@@ -90,7 +99,7 @@ It also allows me to share my code with you :)
 
 
 
-## 1- CONTACTS, COMMENTS & LOGIN
+## 1- CONTACTS, COMMENTS & LOGIN <a name="feature1"></a>
 
 After having generated a first VMC, I first created a first form to add contacts to whom I let the possibility to write a comment; I then used "Devise" to create and manage users. This way, I was able to allow only registered users to leave me a comment. I added an admin column to the users table to allow the administrator to reply to comments.
 
@@ -104,14 +113,14 @@ A message is sent to my slack channel with the information about the user, his s
 
 
 
-## 2- OPENWEATHER
+## 2- OPENWEATHER <a name="feature2"></a>
 
 After adding a navbar thanks to Bootstrap, I wanted to consume a second API; in the middle of a heat wave, I had the idea to implement a feature that displays the weather, it would allow me to collect the temperature and humidity in Lille, and follow its evolution over time thanks to a chart. I turned to OpenWeather, after having configured the token, and parsed the information collected, I used jQuery to dynamically display the information collected in real time. I first implemented chart.js which was later changed to Google Chart.
 Thanks to Sidekiq-cron, I configured a schedule-job to consume the API once per hour (Currently my project is hosted for free at Heroku and the server goes into standby mode if there are no requests, so the cron-job can't do its job as desired).
 
 
 
-## 3- CHATROOM
+## 3- CHATROOM <a name="feature3"></a>
 
 As a new challenge, I wanted to create a dynamic chat, so I followed a tutorial to implement it with jQuery, but I wanted to push the challenge and use Websockets, so I switched to Action Cable.
 First the creation of the Rooms as well as the display of the available ones.
@@ -122,14 +131,14 @@ Wishing to continue working with Websockets, thanks to Action Cable and a Bootst
 
 
 
-## 4- CURRICULUM VITAE
+## 4- CURRICULUM VITAE <a name="feature4"></a>
 
  
 
 I wanted to push the simple creation of my resume, for that I created a MVC and applied a CRUD for jobs, skills, and education. I implemented a form thanks to bootstrap, the information received is saved in my PostgreSQL database, which I then display in cards. 
 
 
-##  **Consulted documentation**
+##  **Consulted documentation** <a name="docueng"></a>
 
 
 
