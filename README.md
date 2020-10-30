@@ -3,22 +3,23 @@ After having done the "Le Wagon" boot-camp, I wanted to start a personal project
 
 
 
+**`This project was developed using:`**
 
->     This project was developed using:
->           • Ruby 2.7 & Ruby on Rails 6 
->           • PostgreSQL
->           • Sidekiq
->           • Sidekiq-cron
->           • Redis
->           • JavaScript & jQuery
->           • HTML5 & CSS
->           • Bootstrap
->           • Cloudniary
->           • Devise
->           • Action Cable
->           • GitHub
+           • Ruby 2.7 & Ruby on Rails 6 
+           • PostgreSQL
+           • Sidekiq
+           • Sidekiq-cron
+           • Redis
+           • JavaScript & jQuery
+           • HTML5 & CSS
+           • Bootstrap
+           • Cloudniary
+           • Devise
+           • Action Cable
+           • Action Mailer
+           • GitHub
 
-
+	
 
 	 - Ruby 2.7 & Ruby on Rails 6
 
@@ -33,7 +34,7 @@ After having done the "Le Wagon" boot-camp, I wanted to start a personal project
 
 
 
-						- PostgreSQL
+	- PostgreSQL
             
  Through my Rails projects, I entrust the data
  base part of my work to postegreSQL, with which I 
@@ -46,7 +47,7 @@ After having done the "Le Wagon" boot-camp, I wanted to start a personal project
 
 
 
-          - JavaScript & jQuery
+	- JavaScript & jQuery
 
 Javascript complements the HTML & CSS of my
 page in order to make it dynamic. I use JS Vanilla, 
@@ -57,7 +58,7 @@ to handle easily the DOM.
 
 
 
-						- HTML5 & CSS            
+	- HTML5 & CSS            
 
 HTML5 allows me to structure my page; 
 thanks to Ruby on Rails, the HTML is 
@@ -71,7 +72,7 @@ implement components easily.
 
 
 
-						- GitHub
+	- GitHub
 
 GitHub allows me to work by branches, 
 compare the code before merging it into 
@@ -85,8 +86,7 @@ It also allows me to share my code with you :)
 
 
 
-      1- CONTACTS, COMMENTS & LOGIN
-
+## 1- CONTACTS, COMMENTS & LOGIN
 
 After generating a first MVC, I first created a first form to add contacts who have the possibility to leave me comments, I then used “Devise” to create and manage users. I added an admin table to the users’ column and to let the administrator reply to comments left by users with an account.
 
@@ -99,16 +99,14 @@ A message is sent to my slack channel with the information about the user, his s
 
 
 
-     2- OPENWEATHER 
-
+## 2- OPENWEATHER
 
 After adding a navbar with Bootstrap, I wanted to consume a second API, in the middle of a heat wave, the idea came to me to implement a feature that displays the weather, it would collect the temperature and humidity in Lille, and track its evolution over time through a chart table. I turned to OpenWeather, after configuring the token, and parse the information, I used jQuery to display dynamically the information collected in real time with Sidekiq. I first implemented chart.js which was later changed to Google Chart.
 Thanks to Sidekiq-cron, I configured a schedule-job to consume the API once per hour (I'm hosted for free at Heroku and the server goes into standby mode if there is no request, so the cron-job can't do its job as desired).
 
 
 
-      3- CHATROOM
-
+## 3- CHATROOM
 
 As a new challenge, I wanted to create a dynamic chat, for that I followed a tutorial to implement it with jQuery, but I wanted to push the challenge and use Websockets, for that I used Action Cable.
 First the creation of the Rooms as well as the display of the available ones.
@@ -119,28 +117,24 @@ Wishing to continue to work with the Websockets, thanks to Action Cable and a Bo
 
 
 
-      4- CURRICULUM VITAE
+## 4- CURRICULUM VITAE
+
  
 
 I wanted to push the simple creation of my resume, for that I created a MVC and applied a CRUD for jobs, skills, and education. I implemented a form thanks to bootstrap, the information received is saved in my PostgreSQL database, which I then display in cards. 
 
 
+# 
 
-
-                              
-	  ****************************************************************************************
-					   ****************
-					   *   FRANCAIS   *
-					   ****************
-	  ****************************************************************************************
-
+# FRANCAIS
 
 
 *Avant toute chose, je souhaite vous remercier pour l’intérêt que vous portez à mon travail.
 Après avoir effectué le boot-camp “Le Wagon”, j’ai souhaité démarrer un projet personnel afin de mettre en avant mes compétences nouvellement acquises et de réaliser un nouveau challenge en implémentant des fonctionnalités plus complexes non-abordées lors de ma formation. Afin de mener à bien mon projet, j’ai souhaité lui donner un processus professionnel, pour cela, j’ai fait appel à un développeur senior, Timothée L., qui je remercie infiniment pour le temps qu’il m’a consacré. Il révisait, validait, et mettait en avant mes erreurs et les bonnes pratiques à suivre suite à mes pull requests, avant de les fusionner avec la branche master.*
 
 
->     Ce projet a été développé grâce à:
+**`Ce projet a été développé grâce à:`**
+
 >           • Ruby 2.7 & Ruby on Rails 6 
 >           • PostgreSQL
 >           • Sidekiq
@@ -152,37 +146,43 @@ Après avoir effectué le boot-camp “Le Wagon”, j’ai souhaité démarrer u
 >           • Cloudniary
 >           • Devise
 >           • Action Cable
+>           • Action Mailer
 >           • GitHub
 
 
-		   - Ruby 2.7 & Ruby on Rails 6
+    - Ruby 2.7 & Ruby on Rails 6
 RoR me permets d'interagir avec la base de données via
 Active Record, consommer des APIs grâce à Sidekiq.
 J'utilise Devise pour générer et gérer des utilisateurs ;
 Action Mailer pour le mailing ; ainsi que Action Cable
 comme framework Websockets.
 
-	   - PostgreSQL
+    
+
+    - PostgreSQL
+
 Au travers de mes projets Rails, je confie la partie base
 de donnée à postegreSQL, avec laquelle j'intéragis grâce
 à Active Record. Il m'arrive également de requêter
 directement postregreSQL pour répondre à des
 problématques précises.
 
-	   - JavaScript & jQuery
+    - JavaScript & jQuery
+
 JavaScript vient compléter l'HTML & le CSS de ma page
 afin de la rendre dynamique. J'utilise JavaScript Vanilla,
 mais selon mes besoins, également jQuery, afin de manipuler
 facilement le DOM.
 
-	   - HTML5 & CSS
+    - HTML5 & CSS
+
 HTML5 me permet de structurer ma page ; grâce à Ruby
 on Rails, l'HTML est généré automatiquement selon mes
 requête. Le CSS afin d'appliquer des règles de style.
 J'utilise également Bootstrap afin d’implémenter
 facilement des composants.
 
-	   - GitHub
+	- GitHub
 GitHub me permet de travailler par branches, comparer
 le code avant de le fusionner dans la branche 'Master';
 ce qui est essentiel pour éviter tout conflit dans la
@@ -192,7 +192,9 @@ dépôt GitHub afin d'examiner mes projets.
                   
 
 
-      1- CONTACTS, COMMENTAIRES & LOGIN
+					  
+
+## 1- CONTACTS, COMMENTAIRES & LOGIN
 
 Après avoir généré un premier MVC, j’ai d’abord créé un premier formulaire afin d’ajouter des contacts à qui je laisse la possibilité d’écrire un commentaire; j’ai par la suite utilisé Devise pour créer et gérer des utilisateurs. J’ai ainsi pu autoriser uniquement les utilisateurs enregistrés à me laisser un commentaire. J’ai ajouté une colonne admin à la table utilisateurs pour permettre  à l’administrateur de répondre aux commentaires.
 
@@ -202,13 +204,13 @@ J’ai voulu créer une interaction entre les «commentaires» et ma chaîne Sla
 Un message est envoyé sur ma chaîne Slack avec les informations concernant l’utilisateur, son sujet, et son message, j’ai la possibilité de répondre directement via un Modal Slack, ou d’ouvrir la page du contact et de répondre directement via mon application.
 
 
-        2- OPENWEATHER 
+## 2- OPENWEATHER
 
 Après avoir ajouté un navbar grâce à Bootstrap, j’ai souhaité consommer une deuxième API; en pleine canicule, l’idée m’est venue d’implémenter une fonctionnalité qui affiche la météo, elle permettrait de récolter la température et l’humidité à Lille, et suivre son évolution dans le temps grâce à un graphique. Je me suis orienté vers OpenWeather, après avoir configuré le token, et parsé les informations récoltées, j’ai utilisé jQuery afin d’afficher dynamiquement les informations récoltées en temps réel. J’ai d’abord implémenté chart.js qui a été changée par la suite pour Google Chart.
 Grâce à Sidekiq-cron, j’ai configuré un schedule-job afin de consommer l’API une fois par heure. (Actuellement mon projet est hébergé gratuitement chez Heroku et le serveur se met en veille s’il n’y a aucune requête, le cron-job ne peut donc effectuer son travail comme souhaité)
 
 
-         3- CHATROOM
+## 3- CHATROOM
 
 Comme nouveau challenge, j’ai eu la volonté de créer un chat dynamique, pour cela j’ai suivi un tutoriel afin de l’implémenter avec jQuery, mais je voulais pousser le challenge et utiliser les Websockets, pour cela j’ai fait appel à Action Cable.
 D’abord la création des Rooms ainsi que l’affichage, de celles qui sont disponibles.
@@ -219,9 +221,74 @@ Souhaitant continuer à travailler avec les Websockets, grâce à Action Cable e
 
 
 
-        4- CURRICULUM VITAE
+## 4- CURRICULUM VITAE
+
  
 
 J’ai voulu pousser la simple création de mon CV, pour cela j’ai créé un MVC et appliqué un CRUD pour les métiers, les compétences, et les formations. J’ai implémenté un formulaire grâce à bootstrap, les informations reçues sont sauvegardées dans ma base de donnée postgreSQL, que j’affiche par la suite dans des cards. 
+
+
+
+## > **Consulted documentation**
+
+**RUBY & RoR** 
+
+	Ruby 2.7 & Ruby on Rails 6
+[https://guides.rubyonrails.org/getting_started.html](https://guides.rubyonrails.org/getting_started.html)
+
+-Action Cable
+[https://guides.rubyonrails.org/action_cable_overview.html](https://guides.rubyonrails.org/action_cable_overview.html)
+
+-Active Records
+[https://guides.rubyonrails.org/active_record_basics.html](https://guides.rubyonrails.org/active_record_basics.html)
+
+[https://guides.rubyonrails.org/active_record_migrations.html](https://guides.rubyonrails.org/active_record_migrations.html)
+
+[https://guides.rubyonrails.org/active_record_validations.html](https://guides.rubyonrails.org/active_record_validations.html)
+
+-Active Job
+[https://guides.rubyonrails.org/active_job_basics.html](https://guides.rubyonrails.org/active_job_basics.html)
+
+-Action Mailer
+[https://guides.rubyonrails.org/action_mailer_basics.html](https://guides.rubyonrails.org/action_mailer_basics.html)
+
+-Layer & Rendering 
+[https://guides.rubyonrails.org/layouts_and_rendering.html](https://guides.rubyonrails.org/layouts_and_rendering.html)
+
+-Action View
+[https://guides.rubyonrails.org/form_helpers.html](https://guides.rubyonrails.org/form_helpers.html)
+
+
+	Sidekiq & Sidekiq-cron
+-Getting started
+[https://github.com/mperham/sidekiq/wiki/Getting-Started](https://github.com/mperham/sidekiq/wiki/Getting-Started)
+
+-Sidekiq-cron
+[https://github.com/ondrejbartas/sidekiq-cron](https://github.com/ondrejbartas/sidekiq-cron)
+
+
+	Redis
+[https://github.com/redis-store/redis-rails](https://github.com/redis-store/redis-rails)
+
+
+
+	 Bootstrap
+[https://getbootstrap.com/docs/4.5/](https://getbootstrap.com/docs/4.5/)
+
+     
+	Cloudniary
+[https://cloudinary.com/documentation/how_to_integrate_cloudinary](https://cloudinary.com/documentation/how_to_integrate_cloudinary)
+
+	Slack
+[https://github.com/slack-ruby/slack-ruby-client#web-client](https://github.com/slack-ruby/slack-ruby-client#web-client)
+[https://api.slack.com/surfaces/modals/using#handling_submissions](https://api.slack.com/surfaces/modals/using#handling_submissions)
+
+	Open Weather 
+https://openweathermap.org/api[enter link description here](https://openweathermap.org/api)
+
+	Chat
+[https://iridakos.com/programming/2019/04/04/creating-chat-application-rails-websockets](https://iridakos.com/programming/2019/04/04/creating-chat-application-rails-websockets)
+
+
 
 
