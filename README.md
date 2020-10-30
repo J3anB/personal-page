@@ -3,7 +3,7 @@ After having done the "Le Wagon" boot-camp, I wanted to start a personal project
 
 
 
-**`This project was developed using:`**
+## **`This project was developed using:`**
 
 >           • Ruby 2.7 & Ruby on Rails 6 
 >           • PostgreSQL
@@ -21,7 +21,7 @@ After having done the "Le Wagon" boot-camp, I wanted to start a personal project
 
 	
 
-	 - Ruby 2.7 & Ruby on Rails 6
+	- Ruby 2.7 & Ruby on Rails 6
 
  RoR allows me to interact with the database via
  Active Record, consume APIs thanks to Sidekiq.
@@ -133,7 +133,7 @@ I wanted to push the simple creation of my resume, for that I created a MVC and 
 Après avoir effectué le boot-camp “Le Wagon”, j’ai souhaité démarrer un projet personnel afin de mettre en avant mes compétences nouvellement acquises et de réaliser un nouveau challenge en implémentant des fonctionnalités plus complexes non-abordées lors de ma formation. Afin de mener à bien mon projet, j’ai souhaité lui donner un processus professionnel, pour cela, j’ai fait appel à un développeur senior, Timothée L., qui je remercie infiniment pour le temps qu’il m’a consacré. Il révisait, validait, et mettait en avant mes erreurs et les bonnes pratiques à suivre suite à mes pull requests, avant de les fusionner avec la branche master.*
 
 
-**`Ce projet a été développé grâce à:`**
+## **`Ce projet a été développé grâce à:`**
 
 >           • Ruby 2.7 & Ruby on Rails 6 
 >           • PostgreSQL
@@ -229,65 +229,65 @@ J’ai voulu pousser la simple création de mon CV, pour cela j’ai créé un M
 
 
 
-## > **Consulted documentation**
+##  **Consulted documentation**
 
 **RUBY & RoR** 
 
 	Ruby 2.7 & Ruby on Rails 6
-[https://guides.rubyonrails.org/getting_started.html](https://guides.rubyonrails.org/getting_started.html)
-
--Action Cable
+> -Getting started
+[https://guides.rubyonrails.org/getting_started.html](https://guides.rubyonrails.org/getting_started.html) 
+> -Action Cable
 [https://guides.rubyonrails.org/action_cable_overview.html](https://guides.rubyonrails.org/action_cable_overview.html)
-
--Active Records
+> -Active Records
 [https://guides.rubyonrails.org/active_record_basics.html](https://guides.rubyonrails.org/active_record_basics.html)
-
 [https://guides.rubyonrails.org/active_record_migrations.html](https://guides.rubyonrails.org/active_record_migrations.html)
-
 [https://guides.rubyonrails.org/active_record_validations.html](https://guides.rubyonrails.org/active_record_validations.html)
-
--Active Job
+> -Active Job
 [https://guides.rubyonrails.org/active_job_basics.html](https://guides.rubyonrails.org/active_job_basics.html)
-
--Action Mailer
+> -Action Mailer
 [https://guides.rubyonrails.org/action_mailer_basics.html](https://guides.rubyonrails.org/action_mailer_basics.html)
-
--Layer & Rendering 
+> -Layer & Rendering 
 [https://guides.rubyonrails.org/layouts_and_rendering.html](https://guides.rubyonrails.org/layouts_and_rendering.html)
-
--Action View
+> -Action View
 [https://guides.rubyonrails.org/form_helpers.html](https://guides.rubyonrails.org/form_helpers.html)
 
 
 	Sidekiq & Sidekiq-cron
--Getting started
+> -Getting started
 [https://github.com/mperham/sidekiq/wiki/Getting-Started](https://github.com/mperham/sidekiq/wiki/Getting-Started)
-
--Sidekiq-cron
+> -Sidekiq-cron
 [https://github.com/ondrejbartas/sidekiq-cron](https://github.com/ondrejbartas/sidekiq-cron)
 
 
 	Redis
+> -Redis Rails 
 [https://github.com/redis-store/redis-rails](https://github.com/redis-store/redis-rails)
 
 
 
 	 Bootstrap
+> -General documentation
 [https://getbootstrap.com/docs/4.5/](https://getbootstrap.com/docs/4.5/)
 
      
 	Cloudniary
+> -Integrating Cloudinary
 [https://cloudinary.com/documentation/how_to_integrate_cloudinary](https://cloudinary.com/documentation/how_to_integrate_cloudinary)
 
 	Slack
+> -Web Client 
 [https://github.com/slack-ruby/slack-ruby-client#web-client](https://github.com/slack-ruby/slack-ruby-client#web-client)
+> -Modal
 [https://api.slack.com/surfaces/modals/using#handling_submissions](https://api.slack.com/surfaces/modals/using#handling_submissions)
 
-	Open Weather 
-https://openweathermap.org/api(https://openweathermap.org/api)
+	Open Weather
+> -General documentation 
+https://openweathermap.org/api[enter link description here](https://openweathermap.org/api)
 
 	Chat
-[https://iridakos.com/programming/2019/04/04/creating-chat-application-rails-websockets](https://iridakos.com/programming/2019/04/04/creating-chat-application-rails-websockets)
+> -Rails chat application 
+[https://github.com/iridakos/rails-chat-tutorial](https://github.com/iridakos/rails-chat-tutorial)
+
 
 
 
