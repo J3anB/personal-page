@@ -136,8 +136,8 @@ I wanted to push the simple creation of my resume, for that I created a MVC and 
 
 
 
-Avant toute chose, je souhaite vous remercier pour l’intérêt que vous portez à mon travail.
-Après avoir effectué le boot-camp “Le Wagon”, j’ai souhaité démarrer un projet personnel afin de mettre en avant mes compétences nouvellement acquises et de réaliser un nouveau challenge en implémentant des fonctionnalités plus complexes non-abordées lors de ma formation. Afin de mener à bien mon projet, j’ai souhaité lui donner un processus professionnel, pour cela, j’ai fait appel à un développeur senior, Timothée L., qui je remercie infiniment pour le temps qu’il m’a consacré. Il révisait, validait, et mettait en avant mes erreurs et les bonnes pratiques à suivre suite à mes pull requests, avant de les fusionner avec la branche master.
+*Avant toute chose, je souhaite vous remercier pour l’intérêt que vous portez à mon travail.
+Après avoir effectué le boot-camp “Le Wagon”, j’ai souhaité démarrer un projet personnel afin de mettre en avant mes compétences nouvellement acquises et de réaliser un nouveau challenge en implémentant des fonctionnalités plus complexes non-abordées lors de ma formation. Afin de mener à bien mon projet, j’ai souhaité lui donner un processus professionnel, pour cela, j’ai fait appel à un développeur senior, Timothée L., qui je remercie infiniment pour le temps qu’il m’a consacré. Il révisait, validait, et mettait en avant mes erreurs et les bonnes pratiques à suivre suite à mes pull requests, avant de les fusionner avec la branche master.*
 
 
 >     Ce projet a été développé grâce à:
