@@ -127,7 +127,7 @@ I wanted to push the simple creation of my resume, for that I created a MVC and 
 
 ##  **Consulted documentation**
 
-**RUBY & RoR** 
+
 
 	Ruby 2.7 & Ruby on Rails 6
 > -Getting started
@@ -297,7 +297,6 @@ I wanted to push the simple creation of my CV, for that I created a VMC and appl
 
 ##  **Documentation consultée**
 
-**RUBY & RoR** 
 
 	Ruby 2.7 & Ruby on Rails 6
 > -Getting started
