@@ -237,12 +237,12 @@ I wanted to push the simple creation of my resume, for that I created a MVC and 
 
 > **Summary 
 
--  [TOOLS](#introductionfr)
-1. [CONTACTS COMMENTS & LOGIN](#feature1fr)
+-  [OUTILS](#introductionfr)
+1. [CONTACTS COMMENTAIRES & LOGIN](#feature1fr)
 2. [OPENWEATHER](#feature2fr)
 3. [CHATROOM](#feature3fr)
 4. [CURRICULUM VITAE](#feature4fr)
-5. [CONSULTED DOCUMENTATION](#docufr)
+5. [DOCUMENTATIONS CONSULTÉES](#docufr)
 
 #
 
