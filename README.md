@@ -237,7 +237,7 @@ I wanted to push the simple creation of my resume, for that I created a MVC and 
 
 # FRANCAIS <a name="french"></a>
 
-> **Sommaire** 
+## Sommaire
 
 -  [OUTILS](#introductionfr)
 1. [CONTACTS COMMENTAIRES & LOGIN](#feature1fr)
