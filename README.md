@@ -129,60 +129,88 @@ I wanted to push the simple creation of my resume, for that I created a MVC and 
 
 
 
+
 	Ruby 2.7 & Ruby on Rails 6
-> -Getting started
-[https://guides.rubyonrails.org/getting_started.html](https://guides.rubyonrails.org/getting_started.html) 
-> -Action Cable
-[https://guides.rubyonrails.org/action_cable_overview.html](https://guides.rubyonrails.org/action_cable_overview.html)
-> -Active Records
-[https://guides.rubyonrails.org/active_record_basics.html](https://guides.rubyonrails.org/active_record_basics.html)
-[https://guides.rubyonrails.org/active_record_migrations.html](https://guides.rubyonrails.org/active_record_migrations.html)
-[https://guides.rubyonrails.org/active_record_validations.html](https://guides.rubyonrails.org/active_record_validations.html)
+>
+> -Getting started 
+> > [https://guides.rubyonrails.org/getting_started.html](https://guides.rubyonrails.org/getting_started.html)
+>
+ > -Action Cable
+> > [https://guides.rubyonrails.org/action_cable_overview.html](https://guides.rubyonrails.org/action_cable_overview.html)
+>
+ > -Active Records
+> > [https://guides.rubyonrails.org/active_record_basics.html](https://guides.rubyonrails.org/active_record_basics.html)
+>
+> > [https://guides.rubyonrails.org/active_record_migrations.html](https://guides.rubyonrails.org/active_record_migrations.html)
+>
+> > [https://guides.rubyonrails.org/active_record_validations.html](https://guides.rubyonrails.org/active_record_validations.html)
+>
 > -Active Job
-[https://guides.rubyonrails.org/active_job_basics.html](https://guides.rubyonrails.org/active_job_basics.html)
+> > [https://guides.rubyonrails.org/active_job_basics.html](https://guides.rubyonrails.org/active_job_basics.html)
+>
 > -Action Mailer
-[https://guides.rubyonrails.org/action_mailer_basics.html](https://guides.rubyonrails.org/action_mailer_basics.html)
+> >[https://guides.rubyonrails.org/action_mailer_basics.html](https://guides.rubyonrails.org/action_mailer_basics.html)
+>
 > -Layer & Rendering 
-[https://guides.rubyonrails.org/layouts_and_rendering.html](https://guides.rubyonrails.org/layouts_and_rendering.html)
+> > [https://guides.rubyonrails.org/layouts_and_rendering.html](https://guides.rubyonrails.org/layouts_and_rendering.html)
+>
 > -Action View
-[https://guides.rubyonrails.org/form_helpers.html](https://guides.rubyonrails.org/form_helpers.html)
+> > [https://guides.rubyonrails.org/form_helpers.html](https://guides.rubyonrails.org/form_helpers.html)
+>
 
+	
 
-	Sidekiq & Sidekiq-cron
+       Sidekiq & Sidekiq-cron
+
 > -Getting started
-[https://github.com/mperham/sidekiq/wiki/Getting-Started](https://github.com/mperham/sidekiq/wiki/Getting-Started)
+> > [https://github.com/mperham/sidekiq/wiki/Getting-Started](https://github.com/mperham/sidekiq/wiki/Getting-Started)
+>
 > -Sidekiq-cron
-[https://github.com/ondrejbartas/sidekiq-cron](https://github.com/ondrejbartas/sidekiq-cron)
+> > [https://github.com/ondrejbartas/sidekiq-cron](https://github.com/ondrejbartas/sidekiq-cron)
+>
+
+	
+
+        Redis
+
+> -Redis Rails
+> > [https://github.com/redis-store/redis-rails](https://github.com/redis-store/redis-rails)
+>
 
 
-	Redis
-> -Redis Rails 
-[https://github.com/redis-store/redis-rails](https://github.com/redis-store/redis-rails)
+	Bootstrap
 
-
-
-	 Bootstrap
 > -General documentation
-[https://getbootstrap.com/docs/4.5/](https://getbootstrap.com/docs/4.5/)
-
+> >[https://getbootstrap.com/docs/4.5/](https://getbootstrap.com/docs/4.5/)
+>
      
 	Cloudniary
+
 > -Integrating Cloudinary
-[https://cloudinary.com/documentation/how_to_integrate_cloudinary](https://cloudinary.com/documentation/how_to_integrate_cloudinary)
+> > [https://cloudinary.com/documentation/how_to_integrate_cloudinary](https://cloudinary.com/documentation/how_to_integrate_cloudinary)
+>
+	
+        Slack
 
-	Slack
 > -Web Client 
-[https://github.com/slack-ruby/slack-ruby-client#web-client](https://github.com/slack-ruby/slack-ruby-client#web-client)
+> > [https://github.com/slack-ruby/slack-ruby-client#web-client](https://github.com/slack-ruby/slack-ruby-client#web-client)
+>
 > -Modal
-[https://api.slack.com/surfaces/modals/using#handling_submissions](https://api.slack.com/surfaces/modals/using#handling_submissions)
+> > [https://api.slack.com/surfaces/modals/using#handling_submissions](https://api.slack.com/surfaces/modals/using#handling_submissions)
+>
+	
 
-	Open Weather
+        Open Weather
+
 > -General documentation 
-https://openweathermap.org/api[enter link description here](https://openweathermap.org/api)
+> > https://openweathermap.org/api](https://openweathermap.org/api)
+>
+	
+        Chat
 
-	Chat
 > -Rails chat application 
-[https://github.com/iridakos/rails-chat-tutorial](https://github.com/iridakos/rails-chat-tutorial)
+> [https://github.com/iridakos/rails-chat-tutorial](https://github.com/iridakos/rails-chat-tutorial)
+>
 
 
 
@@ -299,60 +327,86 @@ I wanted to push the simple creation of my CV, for that I created a VMC and appl
 
 
 	Ruby 2.7 & Ruby on Rails 6
-> -Getting started
-[https://guides.rubyonrails.org/getting_started.html](https://guides.rubyonrails.org/getting_started.html) 
-> -Action Cable
-[https://guides.rubyonrails.org/action_cable_overview.html](https://guides.rubyonrails.org/action_cable_overview.html)
-> -Active Records
-[https://guides.rubyonrails.org/active_record_basics.html](https://guides.rubyonrails.org/active_record_basics.html)
-[https://guides.rubyonrails.org/active_record_migrations.html](https://guides.rubyonrails.org/active_record_migrations.html)
-[https://guides.rubyonrails.org/active_record_validations.html](https://guides.rubyonrails.org/active_record_validations.html)
+>
+> -Getting started 
+> > [https://guides.rubyonrails.org/getting_started.html](https://guides.rubyonrails.org/getting_started.html)
+>
+ > -Action Cable
+> > [https://guides.rubyonrails.org/action_cable_overview.html](https://guides.rubyonrails.org/action_cable_overview.html)
+>
+ > -Active Records
+> > [https://guides.rubyonrails.org/active_record_basics.html](https://guides.rubyonrails.org/active_record_basics.html)
+>
+> > [https://guides.rubyonrails.org/active_record_migrations.html](https://guides.rubyonrails.org/active_record_migrations.html)
+>
+> > [https://guides.rubyonrails.org/active_record_validations.html](https://guides.rubyonrails.org/active_record_validations.html)
+>
 > -Active Job
-[https://guides.rubyonrails.org/active_job_basics.html](https://guides.rubyonrails.org/active_job_basics.html)
+> > [https://guides.rubyonrails.org/active_job_basics.html](https://guides.rubyonrails.org/active_job_basics.html)
+>
 > -Action Mailer
-[https://guides.rubyonrails.org/action_mailer_basics.html](https://guides.rubyonrails.org/action_mailer_basics.html)
+> >[https://guides.rubyonrails.org/action_mailer_basics.html](https://guides.rubyonrails.org/action_mailer_basics.html)
+>
 > -Layer & Rendering 
-[https://guides.rubyonrails.org/layouts_and_rendering.html](https://guides.rubyonrails.org/layouts_and_rendering.html)
+> > [https://guides.rubyonrails.org/layouts_and_rendering.html](https://guides.rubyonrails.org/layouts_and_rendering.html)
+>
 > -Action View
-[https://guides.rubyonrails.org/form_helpers.html](https://guides.rubyonrails.org/form_helpers.html)
+> > [https://guides.rubyonrails.org/form_helpers.html](https://guides.rubyonrails.org/form_helpers.html)
+>
 
+	
 
-	Sidekiq & Sidekiq-cron
+        Sidekiq & Sidekiq-cron
+
 > -Getting started
-[https://github.com/mperham/sidekiq/wiki/Getting-Started](https://github.com/mperham/sidekiq/wiki/Getting-Started)
+> > [https://github.com/mperham/sidekiq/wiki/Getting-Started](https://github.com/mperham/sidekiq/wiki/Getting-Started)
+>
 > -Sidekiq-cron
-[https://github.com/ondrejbartas/sidekiq-cron](https://github.com/ondrejbartas/sidekiq-cron)
+> > [https://github.com/ondrejbartas/sidekiq-cron](https://github.com/ondrejbartas/sidekiq-cron)
+>
 
+	
 
-	Redis
-> -Redis Rails 
-[https://github.com/redis-store/redis-rails](https://github.com/redis-store/redis-rails)
+        Redis
 
+> -Redis Rails
+> > [https://github.com/redis-store/redis-rails](https://github.com/redis-store/redis-rails)
+>
 
 
 	 Bootstrap
-> -General documentation
-[https://getbootstrap.com/docs/4.5/](https://getbootstrap.com/docs/4.5/)
 
+> -General documentation
+> >[https://getbootstrap.com/docs/4.5/](https://getbootstrap.com/docs/4.5/)
+>
      
 	Cloudniary
+
 > -Integrating Cloudinary
-[https://cloudinary.com/documentation/how_to_integrate_cloudinary](https://cloudinary.com/documentation/how_to_integrate_cloudinary)
+> > [https://cloudinary.com/documentation/how_to_integrate_cloudinary](https://cloudinary.com/documentation/how_to_integrate_cloudinary)
+>
+        
+        Slack
 
-	Slack
 > -Web Client 
-[https://github.com/slack-ruby/slack-ruby-client#web-client](https://github.com/slack-ruby/slack-ruby-client#web-client)
+> > [https://github.com/slack-ruby/slack-ruby-client#web-client](https://github.com/slack-ruby/slack-ruby-client#web-client)
+>
 > -Modal
-[https://api.slack.com/surfaces/modals/using#handling_submissions](https://api.slack.com/surfaces/modals/using#handling_submissions)
+> > [https://api.slack.com/surfaces/modals/using#handling_submissions](https://api.slack.com/surfaces/modals/using#handling_submissions)
+>
+	
 
-	Open Weather
+        Open Weather
+
 > -General documentation 
-https://openweathermap.org/api[enter link description here](https://openweathermap.org/api)
+> > https://openweathermap.org/api](https://openweathermap.org/api)
+>
 
-	Chat
+        Chat
+
 > -Rails chat application 
-[https://github.com/iridakos/rails-chat-tutorial](https://github.com/iridakos/rails-chat-tutorial)
-
+> [https://github.com/iridakos/rails-chat-tutorial](https://github.com/iridakos/rails-chat-tutorial)
+>
 
 
 
