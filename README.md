@@ -2,11 +2,11 @@
 > **Summary 
 
 -  [TOOLS](#introduction)
-1. [CONTACTS COMMENTS & LOGIN](#feature1)
-2. [OPENWEATHER](#feature2)
-3. [CHATROOM](#feature3)
-4. [CURRICULUM VITAE](#feature4)
-5. [CONSULTED DOCUMENTATION](#docueng)
+1. [CONTACTS COMMENTS & LOGIN](#feature1eng)
+2. [OPENWEATHER](#feature2eng)
+3. [CHATROOM](#feature3eng)
+4. [CURRICULUM VITAE](#feature4eng)
+5. [CONSULTED DOCUMENTATION](#docuengeng)
 
 Pour lire ce texte en Francais cliquez [ici](#french)
  #
@@ -233,14 +233,25 @@ I wanted to push the simple creation of my resume, for that I created a MVC and 
 
 # 
 
-# FRANCAIS
+# FRANCAIS <a name="french"></a>
+
+> **Summary 
+
+-  [TOOLS](#introductionfr)
+1. [CONTACTS COMMENTS & LOGIN](#feature1fr)
+2. [OPENWEATHER](#feature2fr)
+3. [CHATROOM](#feature3fr)
+4. [CURRICULUM VITAE](#feature4fr)
+5. [CONSULTED DOCUMENTATION](#docufr)
+
+#
 
 
 *Avant toute chose, je souhaite vous remercier pour l’intérêt que vous portez à mon travail.
 Après avoir effectué le boot-camp “Le Wagon”, j’ai souhaité démarrer un projet personnel afin de mettre en avant mes compétences nouvellement acquises et de réaliser un nouveau challenge en implémentant des fonctionnalités plus complexes non-abordées lors de ma formation. Afin de mener à bien mon projet, j’ai souhaité lui donner un processus professionnel, pour cela, j’ai fait appel à un développeur senior, Timothée L., qui je remercie infiniment pour le temps qu’il m’a consacré. Il révisait, validait, et mettait en avant mes erreurs et les bonnes pratiques à suivre suite à mes pull requests, avant de les fusionner avec la branche master.*
 
 
-## **`Ce projet a été développé grâce à:`**
+## **`Ce projet a été développé grâce à:`** <a name="introductionfr"></a>
 
 >           • Ruby 2.7 & Ruby on Rails 6 
 >           • PostgreSQL
@@ -301,7 +312,7 @@ dépôt GitHub afin d'examiner mes projets.
 
 					  
 
-## 1- CONTACTS, COMMENTAIRES & LOGIN
+## 1- CONTACTS, COMMENTAIRES & LOGIN <a name="feature1fr"></a>
 
 Après avoir généré un premier MVC, j’ai d’abord créé un premier formulaire afin d’ajouter des contacts à qui je laisse la possibilité d’écrire un commentaire; j’ai par la suite utilisé Devise pour créer et gérer des utilisateurs. J’ai ainsi pu autoriser uniquement les utilisateurs enregistrés à me laisser un commentaire. J’ai ajouté une colonne admin à la table utilisateurs pour permettre  à l’administrateur de répondre aux commentaires.
 
@@ -311,13 +322,13 @@ J’ai voulu créer une interaction entre les «commentaires» et ma chaîne Sla
 Un message est envoyé sur ma chaîne Slack avec les informations concernant l’utilisateur, son sujet, et son message, j’ai la possibilité de répondre directement via un Modal Slack, ou d’ouvrir la page du contact et de répondre directement via mon application.
 
 
-## 2- OPENWEATHER
+## 2- OPENWEATHER <a name="feature2fr"></a>
 
 Après avoir ajouté un navbar grâce à Bootstrap, j’ai souhaité consommer une deuxième API; en pleine canicule, l’idée m’est venue d’implémenter une fonctionnalité qui affiche la météo, elle permettrait de récolter la température et l’humidité à Lille, et suivre son évolution dans le temps grâce à un graphique. Je me suis orienté vers OpenWeather, après avoir configuré le token, et parsé les informations récoltées, j’ai utilisé jQuery afin d’afficher dynamiquement les informations récoltées en temps réel. J’ai d’abord implémenté chart.js qui a été changée par la suite pour Google Chart.
 Grâce à Sidekiq-cron, j’ai configuré un schedule-job afin de consommer l’API une fois par heure. (Actuellement mon projet est hébergé gratuitement chez Heroku et le serveur se met en veille s’il n’y a aucune requête, le cron-job ne peut donc effectuer son travail comme souhaité)
 
 
-## 3- CHATROOM
+## 3- CHATROOM <a name="feature3fr"></a>
 
 Comme nouveau challenge, j’ai eu la volonté de créer un chat dynamique, pour cela j’ai suivi un tutoriel afin de l’implémenter avec jQuery, mais je voulais pousser le challenge et utiliser les Websockets, pour cela j’ai fait appel à Action Cable.
 D’abord la création des Rooms ainsi que l’affichage, de celles qui sont disponibles.
@@ -328,7 +339,7 @@ Souhaitant continuer à travailler avec les Websockets, grâce à Action Cable e
 
 
 
-## 4- CURRICULUM VITAE
+## 4- CURRICULUM VITAE <a name="feature4fr"></a>
 
  
 
@@ -336,7 +347,7 @@ I wanted to push the simple creation of my CV, for that I created a VMC and appl
 
 
 
-##  **Documentations consultées**
+##  **Documentations consultées** <a name="docufr"></a>
 
 
 	Ruby 2.7 & Ruby on Rails 6
