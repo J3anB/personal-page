@@ -15,8 +15,8 @@ Pour lire ce texte en Français cliquez [ici](#french)
  
 *Before anything else, I would like to thank you for your interest in my work.
 After having done the boot-camp "Le Wagon", I wanted to start a personal project in order to highlight my newly acquired skills and to realize a new challenge by implementing more complex features not covered during my training. In order to carry out my project, I wanted to give it a professional process, for this, I called upon a senior developer, Timothée L., who I thank infinitely for the time he devoted to me. He reviewed, validated, and highlighted my mistakes and the best practices to follow regarding my pull requests, before merging them with the master branch.*
-
 #
+
 
 ## **`This project was developed using:`** <a name="introduction"></a>
 
