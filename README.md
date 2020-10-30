@@ -149,7 +149,7 @@ I wanted to push the simple creation of my resume, for that I created a MVC and 
 > > [https://guides.rubyonrails.org/active_job_basics.html](https://guides.rubyonrails.org/active_job_basics.html)
 >
 > -Action Mailer
-> >[https://guides.rubyonrails.org/action_mailer_basics.html](https://guides.rubyonrails.org/action_mailer_basics.html)
+> > [https://guides.rubyonrails.org/action_mailer_basics.html](https://guides.rubyonrails.org/action_mailer_basics.html)
 >
 > -Layer & Rendering 
 > > [https://guides.rubyonrails.org/layouts_and_rendering.html](https://guides.rubyonrails.org/layouts_and_rendering.html)
@@ -181,7 +181,7 @@ I wanted to push the simple creation of my resume, for that I created a MVC and 
 	Bootstrap
 
 > -General documentation
-> >[https://getbootstrap.com/docs/4.5/](https://getbootstrap.com/docs/4.5/)
+> > [https://getbootstrap.com/docs/4.5/](https://getbootstrap.com/docs/4.5/)
 >
      
 	Cloudniary
@@ -209,7 +209,7 @@ I wanted to push the simple creation of my resume, for that I created a MVC and 
         Chat
 
 > -Rails chat application 
-> [https://github.com/iridakos/rails-chat-tutorial](https://github.com/iridakos/rails-chat-tutorial)
+> > [https://github.com/iridakos/rails-chat-tutorial](https://github.com/iridakos/rails-chat-tutorial)
 >
 
 
@@ -345,7 +345,7 @@ I wanted to push the simple creation of my CV, for that I created a VMC and appl
 > > [https://guides.rubyonrails.org/active_job_basics.html](https://guides.rubyonrails.org/active_job_basics.html)
 >
 > -Action Mailer
-> >[https://guides.rubyonrails.org/action_mailer_basics.html](https://guides.rubyonrails.org/action_mailer_basics.html)
+> > [https://guides.rubyonrails.org/action_mailer_basics.html](https://guides.rubyonrails.org/action_mailer_basics.html)
 >
 > -Layer & Rendering 
 > > [https://guides.rubyonrails.org/layouts_and_rendering.html](https://guides.rubyonrails.org/layouts_and_rendering.html)
@@ -377,7 +377,7 @@ I wanted to push the simple creation of my CV, for that I created a VMC and appl
 	 Bootstrap
 
 > -General documentation
-> >[https://getbootstrap.com/docs/4.5/](https://getbootstrap.com/docs/4.5/)
+> > [https://getbootstrap.com/docs/4.5/](https://getbootstrap.com/docs/4.5/)
 >
      
 	Cloudniary
@@ -405,7 +405,7 @@ I wanted to push the simple creation of my CV, for that I created a VMC and appl
         Chat
 
 > -Rails chat application 
-> [https://github.com/iridakos/rails-chat-tutorial](https://github.com/iridakos/rails-chat-tutorial)
+> > [https://github.com/iridakos/rails-chat-tutorial](https://github.com/iridakos/rails-chat-tutorial)
 >
 
 
