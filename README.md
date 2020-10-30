@@ -327,7 +327,7 @@ I wanted to push the simple creation of my CV, for that I created a VMC and appl
 
 
 
-##  **Documentation consultée**
+##  **Documentations consultées**
 
 
 	Ruby 2.7 & Ruby on Rails 6
