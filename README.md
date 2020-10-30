@@ -1,5 +1,5 @@
-*First of all, I would like to thank you for your interest in my work.
-After having done the "Le Wagon" boot-camp, I wanted to start a personal project to showcase my newly acquired skills and to realize a new challenge by implementing more complex features not discussed before. In order to carry out my project, I wanted to give it a professional process, for this, I called upon a senior developer, Timothée L. alias "Corr4an", who I thank very much for the time he devoted to me. Thanks to GitHub He reviewed, validated, and highlighted my mistakes and best practices in my Pull Requests, before merging them with the master branch.* 
+*Before anything else, I would like to thank you for your interest in my work.
+After having done the boot-camp "Le Wagon", I wanted to start a personal project in order to highlight my newly acquired skills and to realize a new challenge by implementing more complex features not covered during my training. In order to carry out my project, I wanted to give it a professional process, for this, I called upon a senior developer, Timothée L., who I thank infinitely for the time he devoted to me. He reviewed, validated, and highlighted my mistakes and the best practices to follow regarding my pull requests, before merging them with the master branch.*
 
 
 
@@ -88,9 +88,9 @@ It also allows me to share my code with you :)
 
 ## 1- CONTACTS, COMMENTS & LOGIN
 
-After generating a first MVC, I first created a first form to add contacts who have the possibility to leave me comments, I then used “Devise” to create and manage users. I added an admin table to the users’ column and to let the administrator reply to comments left by users with an account.
+After having generated a first VMC, I first created a first form to add contacts to whom I let the possibility to write a comment; I then used "Devise" to create and manage users. This way, I was able to allow only registered users to leave me a comment. I added an admin column to the users table to allow the administrator to reply to comments.
 
-In the same vein, I implemented "Action Mailer," which allows to manage the mailing. Sending a confirmation email when creating an account or after a password change. An e-mail is also sent to me when a comment is submitted, as well to the user following my reply.
+In the same vein, I implemented "Action Mailer" which allows to manage the mailing when creating an account or after a password change. An e-mail notification is also sent to me when a comment is posted, as well as an e-mail notification to the user following my reply.
 
 I wanted to create an interaction between the "comments" and my Slack channel, so I implemented "slack-ruby-client" and its use "Web Client". 
 A message is sent to my slack channel with the information about the user, his subject, and his message, I have the possibility to reply directly via a slack modal, or to open the contact page and reply directly via my application.
@@ -99,21 +99,22 @@ A message is sent to my slack channel with the information about the user, his s
 
 
 
+
 ## 2- OPENWEATHER
 
-After adding a navbar with Bootstrap, I wanted to consume a second API, in the middle of a heat wave, the idea came to me to implement a feature that displays the weather, it would collect the temperature and humidity in Lille, and track its evolution over time through a chart table. I turned to OpenWeather, after configuring the token, and parse the information, I used jQuery to display dynamically the information collected in real time with Sidekiq. I first implemented chart.js which was later changed to Google Chart.
-Thanks to Sidekiq-cron, I configured a schedule-job to consume the API once per hour (I'm hosted for free at Heroku and the server goes into standby mode if there is no request, so the cron-job can't do its job as desired).
+After adding a navbar thanks to Bootstrap, I wanted to consume a second API; in the middle of a heat wave, I had the idea to implement a feature that displays the weather, it would allow me to collect the temperature and humidity in Lille, and follow its evolution over time thanks to a chart. I turned to OpenWeather, after having configured the token, and parsed the information collected, I used jQuery to dynamically display the information collected in real time. I first implemented chart.js which was later changed to Google Chart.
+Thanks to Sidekiq-cron, I configured a schedule-job to consume the API once per hour (Currently my project is hosted for free at Heroku and the server goes into standby mode if there are no requests, so the cron-job can't do its job as desired).
 
 
 
 ## 3- CHATROOM
 
-As a new challenge, I wanted to create a dynamic chat, for that I followed a tutorial to implement it with jQuery, but I wanted to push the challenge and use Websockets, for that I used Action Cable.
+As a new challenge, I wanted to create a dynamic chat, so I followed a tutorial to implement it with jQuery, but I wanted to push the challenge and use Websockets, so I switched to Action Cable.
 First the creation of the Rooms as well as the display of the available ones.
-Then I configured the message transmission using Action Cable; in order to make this feature more optimal, I segmented it using Services, Helpers & Channels. The messages are displayed dynamically thanks to JavaScript.
+Then I configured the message transmission using Action Cable; to make this feature more optimal, I segmented it using Services, Helpers & Channels. The messages are displayed dynamically using JavaScript.
 I also used the same system to display the users online on each of the Rooms, and give the possibility to create a private Room.
 
-Wishing to continue to work with the Websockets, thanks to Action Cable and a Bootstrap modal, I implemented a function that manages all notifications. Whether it's those related to account creation or login; or those related to the CRUD of the Rooms, and cv/competency cards. 
+Wishing to continue working with Websockets, thanks to Action Cable and a Bootstrap modal, I implemented a function that handles all notifications. Be it those related to account creation or login; or those related to the CRUD of the Rooms, and cv/competency cards. 
 
 
 
@@ -290,7 +291,7 @@ Souhaitant continuer à travailler avec les Websockets, grâce à Action Cable e
 
  
 
-J’ai voulu pousser la simple création de mon CV, pour cela j’ai créé un MVC et appliqué un CRUD pour les métiers, les compétences, et les formations. J’ai implémenté un formulaire grâce à bootstrap, les informations reçues sont sauvegardées dans ma base de donnée postgreSQL, que j’affiche par la suite dans des cards. 
+I wanted to push the simple creation of my CV, for that I created a VMC and applied a CRUD for trades, skills, and training. I implemented a form thanks to bootstrap, the information received is saved in my postgreSQL database, which I then display in cards.
 
 
 
