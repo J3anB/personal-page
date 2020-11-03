@@ -5,7 +5,9 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">Name</th>
+      <% if current_user != nil and current_user.admin %>
       <th scope="col">Email</th>
+        <% end %>
       <th scope="col">Subject</th>
       <th scope="col">Message</th>
       <th scope="col">Response</th>
@@ -17,7 +19,9 @@
       <tr>
         <th scope="row"><%= contact.id %></th>
         <td><%= contact.name %></td>
+        <% if current_user != nil and current_user.admin %>
         <td><%= contact.email %></td>
+          <% end %>
         <td><%= contact.subject %></td>
         <td><%= contact.message %></td>
         <td>
