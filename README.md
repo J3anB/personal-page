@@ -245,8 +245,8 @@ I wanted to push the simple creation of my resume, for that I created a MVC and 
 #
 
 Afin de vous éviter de créer un compte, je vous invite à utiliser le compte ci-dessou: 
-email: guest@bertiazar.com
-pswrd: Guest2020
+> - email: guest@bertiazar.com
+> - pswrd: Guest2020
 
 ## Sommaire
 
