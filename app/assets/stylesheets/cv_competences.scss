@@ -22,7 +22,7 @@ li {
 .list-group-flush > .list-group-item.cv-title {
   text-align: center;
   font-size: 1.2rem;
-  font-family: serif;
+  font-family: "Roboto Condensed";
   font-weight: bold;
   border-top: 1px solid rgba(126, 160, 183, 0.3);
   border-bottom: 0px solid $border-color;
@@ -36,6 +36,7 @@ li {
 .list-group-item.text-style{
 flex: 1;
   border-radius: 5px;
+  font-family: "Roboto";
 }
 
 .list-group-flush > .list-group-item.cv-date{
@@ -52,10 +53,11 @@ flex: 1;
   text-align: center;
   border-bottom: 1px solid #7EA0B7;
   margin-bottom: 10px;
-
+  font-family: "Roboto Condensed";
 }
 .text-style {
   margin-bottom: 10px;
+  font-family: "Roboto Condensed";
 }
 
 .mother-card .list-group{

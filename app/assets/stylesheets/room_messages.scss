@@ -6,7 +6,7 @@
 
   .username {
     margin: 5px;
-
+    font-family: "Roboto Condensed medium";
   }
 
   .message-content {
@@ -16,6 +16,7 @@
     border-radius: 5px;
     background: rgba(58, 80, 107, 0.16);
     color: black;
+    font-family: "Roboto Condensed";
   }
 
   & + .chat-message-container {
