@@ -4,8 +4,8 @@
 ## Summary 
 
 To avoid you creating an account, here you have a guest account to login with: 
-> email: guest@bertiazar.com
-> pswrd: Guest2020
+> - email: guest@bertiazar.com
+> - pswrd: Guest2020
 
 
 -  [TOOLS](#introduction)
