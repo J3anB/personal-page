@@ -3,6 +3,11 @@
    
 ## Summary 
 
+To avoid you creating an account, here you have a guest account to login with: 
+email: guest@bertiazar.com
+pswrd: Guest2020
+
+
 -  [TOOLS](#introduction)
 1. [CONTACTS COMMENTS & LOGIN](#feature1eng)
 2. [OPENWEATHER](#feature2eng)
@@ -233,9 +238,15 @@ I wanted to push the simple creation of my resume, for that I created a MVC and 
 
 
 
+
 # 
 
 # FRANÇAIS <a name="french"></a>
+#
+
+Afin de vous éviter de créer un compte, je vous invite à utiliser le compte ci-dessou: 
+email: guest@bertiazar.com
+pswrd: Guest2020
 
 ## Sommaire
 
@@ -245,6 +256,7 @@ I wanted to push the simple creation of my resume, for that I created a MVC and 
 3. [CHATROOM](#feature3fr)
 4. [CURRICULUM VITAE](#feature4fr)
 5. [DOCUMENTATIONS CONSULTÉES](#docufr)
+
 
 #
 
