@@ -9,8 +9,10 @@
     <td><%= @contact.name %></td>
   </tr>
   <tr>
+  <% if current_user != nil and current_user.admin %>
     <th scope="row"><i class="fas fa-at"></i></th>
     <td><%= @contact.email %></td>
+    <% end %>
   </tr>
   <tr>
     <th scope="row"><i class="fas fa-paperclip"></i></th>
