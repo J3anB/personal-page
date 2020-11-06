@@ -311,7 +311,7 @@ facilement le DOM.
 HTML5 me permet de structurer ma page ; grâce à Ruby
 on Rails, l'HTML est généré automatiquement selon mes
 requête. Le CSS afin d'appliquer des règles de style.
-J'utilise également Bootstrap afin d’implémenter
+J'utilise également Bootstrap afin d’intégrer
 facilement des composants.
 
 	- GitHub
