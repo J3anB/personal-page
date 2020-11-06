@@ -262,7 +262,7 @@ Afin de vous éviter de créer un compte, je vous invite à utiliser le compte c
 
 
 *Avant toute chose, je souhaite vous remercier pour l’intérêt que vous portez à mon travail.
-Après avoir effectué le boot-camp “Le Wagon”, j’ai souhaité démarrer un projet personnel afin de mettre en avant mes compétences nouvellement acquises et de réaliser un nouveau challenge en implémentant des fonctionnalités plus complexes non-abordées lors de ma formation. Afin de mener à bien mon projet, j’ai souhaité lui donner un processus professionnel, pour cela, j’ai fait appel à un développeur senior, Timothée L., qui je remercie infiniment pour le temps qu’il m’a consacré. Il révisait, validait, et mettait en avant mes erreurs et les bonnes pratiques à suivre suite à mes pull requests, avant de les fusionner avec la branche master.*
+Après avoir effectué le boot-camp “Le Wagon”, j’ai souhaité démarrer un projet personnel afin de mettre en avant mes compétences nouvellement acquises et de réaliser un nouveau challenge en intégrant des fonctionnalités plus complexes non-abordées lors de ma formation. Afin de mener à bien mon projet, j’ai souhaité lui donner un processus professionnel, pour cela, j’ai fait appel à un développeur senior, Timothée L., qui je remercie infiniment pour le temps qu’il m’a consacré. Il révisait, validait, et mettait en avant mes erreurs et les bonnes pratiques à suivre suite à mes pull requests, avant de les fusionner avec la branche master.*
 #
 
 ## **`Ce projet a été développé grâce à:`** <a name="introductionfr"></a>
@@ -357,7 +357,7 @@ Souhaitant continuer à travailler avec les Websockets, grâce à Action Cable e
 
  
 
-I wanted to push the simple creation of my CV, for that I created a VMC and applied a CRUD for trades, skills, and training. I implemented a form thanks to bootstrap, the information received is saved in my postgreSQL database, which I then display in cards.
+Je voulais pousser la simple création de mon CV, pour cela j'ai créé un MVC et appliqué un CRUD pour les métiers, les compétences et la formation. J'ai mis en place un formulaire grâce à bootstrap, les informations reçues sont enregistrées dans ma base de données PostgreSQL, que j'affiche ensuite sous forme de cards.
 
 
 
