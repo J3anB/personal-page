@@ -6,7 +6,9 @@
 To avoid you creating an account, here you have a guest account to login with: 
 > - email: guest@bertiazar.com
 > - pswrd: Guest2020
-
+>
+> Please excuse the slowness of the first loading, my project is actualy hosted for free at Heroku,
+> and the server is on "sleep" if it is not requested
 
 -  [TOOLS](#introduction)
 1. [CONTACTS COMMENTS & LOGIN](#feature1eng)
@@ -247,6 +249,10 @@ I wanted to push the simple creation of my resume, for that I created a MVC and 
 Afin de vous éviter de créer un compte, je vous invite à utiliser le compte ci-dessou: 
 > - email: guest@bertiazar.com
 > - pswrd: Guest2020
+>
+> Veuillez excuser la lenteur du premier chargement, mon projet est actuellement hébergé gratuitement chez Heroku,
+> et le serveur est en "veille" si elle n'est pas demandée
+
 
 ## Sommaire
 
