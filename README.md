@@ -251,7 +251,7 @@ Afin de vous éviter de créer un compte, je vous invite à utiliser le compte c
 > - pswrd: Guest2020
 >
 > Veuillez excuser la lenteur du premier chargement, mon projet est actuellement hébergé gratuitement chez Heroku,
-> et le serveur est en "veille" si elle n'est pas demandée
+> et le serveur est en "veille" s'il n'est pas requêté
 
 
 ## Sommaire
