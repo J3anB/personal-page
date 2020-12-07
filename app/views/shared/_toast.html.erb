@@ -1,14 +1,12 @@
-<% flash.each do |flash_name, flash_message| %>
+<div id="toast-place-holder">
+  <% flash.each do |flash_name, flash_message| %>
 
-  <%= render partial: 'shared/toast_template', locals: {flash_name: flash_name, flash_message: flash_message, flash_time: Time.now.strftime("%m/%d/%Y - %I:%M%p")} %>
+    <%= render partial: 'shared/toast_template', locals: {flash_name: flash_name, flash_message: flash_message, flash_time: Time.now.strftime("%m/%d/%Y - %I:%M%p")} %>
 
-<% end %>
+  <% end %>
 
-<div id="toast-id" class="invisible">
-  <%= render partial: 'shared/toast_template', locals: {flash_name: '', flash_message: '', flash_time: ''} %>
-</div>
-
-<div id="toast-place-holder" >
-
+  <div id="toast-id" class="invisible">
+    <%= render partial: 'shared/toast_template', locals: {flash_name: '', flash_message: '', flash_time: ''} %>
+  </div>
 
 </div>
